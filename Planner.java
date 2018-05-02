@@ -14,14 +14,20 @@ public class Planner {
 
     // constructor; initialize graph
     public Planner(LinkedList<Airport> portList, LinkedList<Flight> fltList) {
-
+        for(Airport port: portList){
+            flightMap.put(port, new LinkedList<>());
+        }
+        for(Flight flt: fltList){
+            Airport port = Airport.portMap.get(flt.src);
+            //TODO
+        }
     }
 
     public Itinerary Schedule(String start, String end, String departure) {
         LinkedList<Flight> flights = new LinkedList<>();
         boolean found = false;
         //TODO
-        
+
         return new Itinerary(flights, found);
     }
 

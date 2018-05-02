@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdd2433c-b369-4edf-a150-383420eace8c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/Airport.java" afterPath="$PROJECT_DIR$/Airport.java" />
-      <change beforePath="$PROJECT_DIR$/Flight.java" afterPath="$PROJECT_DIR$/Flight.java" />
-      <change beforePath="$PROJECT_DIR$/Itinerary.java" afterPath="$PROJECT_DIR$/Itinerary.java" />
       <change beforePath="$PROJECT_DIR$/Planner.java" afterPath="$PROJECT_DIR$/Planner.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -21,7 +18,7 @@
       <file leaf-file-name="MainAir.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MainAir.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="633">
+            <state relative-caret-position="849">
               <caret line="56" column="24" lean-forward="false" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
               <folding />
             </state>
@@ -31,8 +28,8 @@
       <file leaf-file-name="Flight.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Flight.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="10" column="11" lean-forward="true" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+            <state relative-caret-position="180">
+              <caret line="11" column="66" lean-forward="false" selection-start-line="11" selection-start-column="66" selection-end-line="11" selection-end-column="66" />
               <folding>
                 <element signature="e#572#573#0" expanded="true" />
                 <element signature="e#664#665#0" expanded="true" />
@@ -57,11 +54,11 @@
       <file leaf-file-name="Airport.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Airport.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+            <state relative-caret-position="306">
+              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding>
-                <element signature="e#416#417#0" expanded="true" />
-                <element signature="e#458#459#0" expanded="true" />
+                <element signature="e#502#503#0" expanded="true" />
+                <element signature="e#544#545#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -70,8 +67,8 @@
       <file leaf-file-name="Planner.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Planner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="23" column="8" lean-forward="true" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+            <state relative-caret-position="378">
+              <caret line="21" column="18" lean-forward="false" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#getMinute#0;class#Planner#0" expanded="false" />
@@ -99,8 +96,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Flight.java" />
-        <option value="$PROJECT_DIR$/Airport.java" />
         <option value="$PROJECT_DIR$/Itinerary.java" />
+        <option value="$PROJECT_DIR$/Airport.java" />
         <option value="$PROJECT_DIR$/Planner.java" />
       </list>
     </option>
@@ -265,12 +262,12 @@
       <workItem from="1525249651193" duration="35000" />
       <workItem from="1525255866962" duration="3913000" />
       <workItem from="1525268360893" duration="9000" />
-      <workItem from="1525272410601" duration="2907000" />
+      <workItem from="1525272410601" duration="3438000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6864000" />
+    <option name="totallyTimeSpent" value="7395000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="260" y="22" width="1922" height="1092" extended-state="6" />
@@ -339,8 +336,8 @@
         <state relative-caret-position="270">
           <caret line="17" column="20" lean-forward="false" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
           <folding>
-            <element signature="e#416#417#0" expanded="true" />
-            <element signature="e#458#459#0" expanded="true" />
+            <element signature="e#502#503#0" expanded="true" />
+            <element signature="e#544#545#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -380,8 +377,8 @@
         <state relative-caret-position="270">
           <caret line="17" column="20" lean-forward="false" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
           <folding>
-            <element signature="e#416#417#0" expanded="true" />
-            <element signature="e#458#459#0" expanded="true" />
+            <element signature="e#502#503#0" expanded="true" />
+            <element signature="e#544#545#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -454,27 +451,8 @@
         <state relative-caret-position="90">
           <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding>
-            <element signature="e#416#417#0" expanded="true" />
-            <element signature="e#458#459#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MainAir.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="633">
-          <caret line="56" column="24" lean-forward="false" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Airport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
-          <folding>
-            <element signature="e#416#417#0" expanded="true" />
-            <element signature="e#458#459#0" expanded="true" />
+            <element signature="e#502#503#0" expanded="true" />
+            <element signature="e#544#545#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -492,8 +470,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Flight.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="10" column="11" lean-forward="true" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+        <state relative-caret-position="180">
+          <caret line="11" column="66" lean-forward="false" selection-start-line="11" selection-start-column="66" selection-end-line="11" selection-end-column="66" />
           <folding>
             <element signature="e#572#573#0" expanded="true" />
             <element signature="e#664#665#0" expanded="true" />
@@ -501,10 +479,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/MainAir.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="849">
+          <caret line="56" column="24" lean-forward="false" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Airport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="e#502#503#0" expanded="true" />
+            <element signature="e#544#545#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Planner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="8" lean-forward="true" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+        <state relative-caret-position="378">
+          <caret line="21" column="18" lean-forward="false" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#getMinute#0;class#Planner#0" expanded="false" />
