@@ -1,15 +1,16 @@
 // Airline Travel Scheduler - Itinerary
 // Bongki Moon (bkmoon@snu.ac.kr)
 
-import java.util.ArrayList;
+
+import java.util.LinkedList;
 
 public class Itinerary {
 
-    private ArrayList<Flight> flights;
+    private LinkedList<Flight> flights;
     private boolean found;
 
     // constructor
-    Itinerary(ArrayList<Flight> flights, boolean found) {
+    Itinerary(LinkedList<Flight> flights, boolean found) {
         this.flights = flights;
         this.found = found;
     }

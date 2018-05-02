@@ -8,17 +8,20 @@ import java.util.*;
 public class Airport {
 
     private String portName;
-    private int hour;
-    private int minute;
+    private int minutes;
 
     public Airport(String port, String connectTime) {
         portName = port;
-        hour = Integer.parseInt(connectTime.substring(0, 1));
-        minute = Integer.parseInt(connectTime.substring(2, 3));
+        minutes = Planner.getMinute(connectTime);
     } // constructor
 
     public void print() {
 
+    }
+
+    @Override
+    public int hashCode(){
+        return portName.hashCode();
     }
 
 }
