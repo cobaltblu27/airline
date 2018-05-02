@@ -5,12 +5,13 @@ import java.util.LinkedList;
 
 public class Planner {
 
-	// constructor
-	public Planner(LinkedList<Airport> portList, LinkedList<Flight> fltList) {
-	}
+    // constructor; initialize graph
+    public Planner(LinkedList<Airport> portList, LinkedList<Flight> fltList) {
 
-	public Itinerary Schedule(String start, String end, String departure) {
+    }
 
-	}
+    public Itinerary Schedule(String start, String end, String departure) {
+
+    }
 
 }
