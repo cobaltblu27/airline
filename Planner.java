@@ -1,25 +1,46 @@
-import sun.awt.image.ImageWatched;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.LinkedList;
 
 // Airline Travel Scheduler - Planner
 // Bongki Moon (bkmoon@snu.ac.kr)
 
 public class Planner {
-
-    private HashMap<Airport, LinkedList<Flight>> flightMap;
-
-
+    //airportFlightMap entry contains flights departing from key airport
+    private HashMap<Airport, LinkedList<Flight>> airportFlightMap;
+    /* flightLinkMap entry contains flights that can be transferred from key flight
+     * this will be used for dynamic programming
+     */
+    private HashMap<Flight, HashSet<Flight>> flightLinkMap;
 
     // constructor; initialize graph
     public Planner(LinkedList<Airport> portList, LinkedList<Flight> fltList) {
-        for(Airport port: portList){
-            flightMap.put(port, new LinkedList<>());
+        airportFlightMap = new HashMap<>();
+        flightLinkMap = new HashMap<>();
+        for (Airport port : portList) {
+            airportFlightMap.put(port, new LinkedList<>());
         }
-        for(Flight flt: fltList){
-            Airport port = Airport.portMap.get(flt.src);
-            //TODO
+        //initialize airportFlightMap
+        for (Flight flt : fltList) {
+            Airport port = flt.getSrc();
+            airportFlightMap.get(port).add(flt);
+        }
+        //initialize flightLinkMap
+        for (Flight flt : fltList) {
+            int arrival = flt.getArrivalMin();
+            Airport departAirport = flt.getDest();
+            arrival += departAirport.getConnectTime();
+            HashMap<Airport, Flight> flightMap = new HashMap<>();
+
+            for (Flight canGoTo : airportFlightMap.get(departAirport)) {
+                if (canGoTo.getDepartureMin() > arrival) {
+                    flightMap.merge(canGoTo.getDest(), canGoTo, (flt1, flt2) ->
+                            flt1.getArrivalMin() < flt2.getArrivalMin() ? flt1 : flt2
+                    );
+                }
+            }
+            flightLinkMap.put(flt, new HashSet<>(flightMap.values()));
         }
     }
 

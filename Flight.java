@@ -3,24 +3,44 @@
 
 public class Flight {
 
-    public String src, dest;
-    public String stime, dtime;
-    public int smin, dmin;
-    public int interval;
+    private Airport src, dest;
+    private String departureTime, arrivalTime;
+    private int departureMin, arrivalMin;
+    private int interval;
 
     // constructor
     public Flight(String src, String dest, String stime, String dtime) {
-        this.src = src;
-        this.dest = dest;
-        this.stime = stime;
-        this.dtime = dtime;
-        smin = Planner.getMinute(stime);
-        dmin = Planner.getMinute(dtime);
-        interval = Planner.getInterval(smin, dmin);
+        this.src = Airport.portMap.get(src);
+        this.dest = Airport.portMap.get(dest);
+        this.departureTime = stime;
+        this.arrivalTime = dtime;
+        departureMin = Planner.getMinute(stime);
+        arrivalMin = Planner.getMinute(dtime);
+        interval = Planner.getInterval(departureMin, arrivalMin);
     }
 
     public void print() {
-        System.out.print("[" + src + "->" + dest + ":" + stime + "->" + dtime + "]");
+        System.out.print("[" + src + "->" + dest + ":" + departureTime + "->" + arrivalTime + "]");
+    }
+
+    public int getArrivalMin() {
+        return arrivalMin;
+    }
+
+    private int getInterval() {
+        return interval;
+    }
+
+    public int getDepartureMin() {
+        return departureMin;
+    }
+
+    public Airport getSrc() {
+        return src;
+    }
+
+    public Airport getDest() {
+        return dest;
     }
 
 }

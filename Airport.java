@@ -13,6 +13,8 @@ public class Airport {
     private int minutes;
 
     public Airport(String port, String connectTime) {
+        if(portMap == null)
+            portMap = new HashMap<>();
         portName = port;
         minutes = Planner.getMinute(connectTime);
         portMap.put(port, this);
@@ -25,6 +27,10 @@ public class Airport {
     @Override
     public int hashCode(){
         return portName.hashCode();
+    }
+
+    public int getConnectTime(){
+        return minutes;
     }
 
 }
