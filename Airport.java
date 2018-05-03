@@ -8,6 +8,8 @@ public class Airport {
 
     public static HashMap<String, Airport> portMap;
 
+    private HashSet<Airport> destList;
+
     //entry contains flight heading to key airport
     private HashMap<Airport, HashSet<Flight>> flightSet;
 
@@ -27,7 +29,13 @@ public class Airport {
 
     }
 
+    public boolean canGoTo(Airport dest){
+        return destList.contains(dest);
+    }
+
     public Flight nextFlight(int time, Airport dest) {
+        if (!flightSet.keySet().contains(dest))
+            return null;
         Flight fastestFlight = null;
         int minInterval = 24 * 60;
         for (Flight flt : flightSet.get(dest)) {
@@ -43,6 +51,7 @@ public class Airport {
     }
 
     public void addFlight(Flight flt) {
+        destList.add(flt.getDest());
         if (flightSet.keySet().contains(flt.getDest())) {
             HashSet<Flight> flights = flightSet.get(flt.getDest());
             Flight remove = null;
@@ -53,11 +62,8 @@ public class Airport {
                 }
             }
             if (remove != null) {//check if flights departing at same time exists
-                int removeTargetTime = remove.getArrivalMin();
-                int fltTime = flt.getArrivalMin();
-                if (removeTargetTime < 60 && fltTime > 23 * 60)
-                    removeTargetTime += 24 * 60;
-                if (removeTargetTime > fltTime) {//check if new flight arrives faster
+                if (Planner.getInterval(flt.getArrivalMin(), remove.getArrivalMin()) < 12 * 60) {
+                    //check if new flight arrives faster
                     flights.remove(remove);
                     flights.add(flt);
                 }

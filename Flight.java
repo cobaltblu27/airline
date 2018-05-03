@@ -2,6 +2,7 @@
 // Bongki Moon (bkmoon@snu.ac.kr)
 
 import java.util.Comparator;
+import java.util.HashSet;
 
 public class Flight {
 
@@ -10,8 +11,11 @@ public class Flight {
     private int departureMin, arrivalMin;
     private int interval;
 
+    private HashSet<Flight> nextFlight;
+
     // constructor
     public Flight(String src, String dest, String stime, String dtime) {
+        nextFlight = new HashSet<>();
         this.src = Airport.portMap.get(src);
         this.dest = Airport.portMap.get(dest);
         this.departureTime = stime;
@@ -19,7 +23,12 @@ public class Flight {
         departureMin = Planner.getMinute(stime);
         arrivalMin = Planner.getMinute(dtime);
         interval = Planner.getInterval(departureMin, arrivalMin);
-        this.src.addFlight(this);
+    }
+    public Flight(Airport src, Airport dest, int smin, int dmin){
+        this.src = src;
+        this.dest = dest;
+        departureMin = smin;
+        arrivalMin = dmin;
     }
 
     public void print() {

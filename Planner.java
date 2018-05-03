@@ -1,56 +1,25 @@
 
-import java.util.HashMap;
-import java.util.HashSet;
 import java.util.LinkedList;
 
 // Airline Travel Scheduler - Planner
 // Bongki Moon (bkmoon@snu.ac.kr)
 
 public class Planner {
-    //airportFlightMap entry contains flights departing from key airport
-    private HashMap<Airport, LinkedList<Flight>> airportFlightMap;
-    /* flightLinkMap entry contains flights that can be transferred from key flight
-     * this will be used for dynamic programming
-     */
-    private HashMap<Flight, HashSet<Flight>> flightLinkMap;
+
 
     // constructor; initialize graph
     public Planner(LinkedList<Airport> portList, LinkedList<Flight> fltList) {
-        airportFlightMap = new HashMap<>();
-        flightLinkMap = new HashMap<>();
-        for (Airport port : portList) {
-            airportFlightMap.put(port, new LinkedList<>());
+        for(Flight flt: fltList){
+            flt.getSrc().addFlight(flt);
         }
-        //initialize airportFlightMap
-        for (Flight flt : fltList) {
-            Airport port = flt.getSrc();
-            airportFlightMap.get(port).add(flt);
-        }
-        //initialize flightLinkMap
 
-        ////takes too long
-//        for (Flight flt : fltList) {
-//            int arrival = flt.getArrivalMin();
-//            Airport departAirport = flt.getDest();
-//            arrival += departAirport.getConnectTime();
-//            HashMap<Airport, Flight> flightMap = new HashMap<>();
-//
-//            for (Flight canGoTo : airportFlightMap.get(departAirport)) {
-//                if (canGoTo.getDepartureMin() > arrival) {
-//                    flightMap.merge(canGoTo.getDest(), canGoTo, (flt1, flt2) ->
-//                            flt1.getArrivalMin() < flt2.getArrivalMin() ? flt1 : flt2
-//                    );
-//                }
-//            }
-//            flightLinkMap.put(flt, new HashSet<>(flightMap.values()));
-//        }
     }
 
     public Itinerary Schedule(String start, String end, String departure) {
         LinkedList<Flight> flights = new LinkedList<>();
         boolean found = false;
         int departMin = getMinute(departure);
-        //TODO
+
 
         return new Itinerary(flights, found);
     }
