@@ -27,26 +27,29 @@ public class Planner {
             airportFlightMap.get(port).add(flt);
         }
         //initialize flightLinkMap
-        for (Flight flt : fltList) {
-            int arrival = flt.getArrivalMin();
-            Airport departAirport = flt.getDest();
-            arrival += departAirport.getConnectTime();
-            HashMap<Airport, Flight> flightMap = new HashMap<>();
 
-            for (Flight canGoTo : airportFlightMap.get(departAirport)) {
-                if (canGoTo.getDepartureMin() > arrival) {
-                    flightMap.merge(canGoTo.getDest(), canGoTo, (flt1, flt2) ->
-                            flt1.getArrivalMin() < flt2.getArrivalMin() ? flt1 : flt2
-                    );
-                }
-            }
-            flightLinkMap.put(flt, new HashSet<>(flightMap.values()));
-        }
+        ////takes too long
+//        for (Flight flt : fltList) {
+//            int arrival = flt.getArrivalMin();
+//            Airport departAirport = flt.getDest();
+//            arrival += departAirport.getConnectTime();
+//            HashMap<Airport, Flight> flightMap = new HashMap<>();
+//
+//            for (Flight canGoTo : airportFlightMap.get(departAirport)) {
+//                if (canGoTo.getDepartureMin() > arrival) {
+//                    flightMap.merge(canGoTo.getDest(), canGoTo, (flt1, flt2) ->
+//                            flt1.getArrivalMin() < flt2.getArrivalMin() ? flt1 : flt2
+//                    );
+//                }
+//            }
+//            flightLinkMap.put(flt, new HashSet<>(flightMap.values()));
+//        }
     }
 
     public Itinerary Schedule(String start, String end, String departure) {
         LinkedList<Flight> flights = new LinkedList<>();
         boolean found = false;
+        int departMin = getMinute(departure);
         //TODO
 
         return new Itinerary(flights, found);

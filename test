@@ -1,1 +1,2 @@
 java MainAir public/Hawaiian-airports.txt public/Hawaiian-flights.txt public/Hawaiian-customers10.txt > test.out
+cat test.out

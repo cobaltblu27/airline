@@ -20,6 +20,6 @@
 
 
 Failed to find a flight schedule for 10 out of 10 customers
-Elapsed times: 64 (millsec) for planning, 1 (millisec) for scheduling
-Memory consumption: 3839352 bytes
-Total CPU time consumed by the thread: 143 (millsec)
+Elapsed times: 1 (millsec) for planning, 2 (millisec) for scheduling
+Memory consumption: 2558536 bytes
+Total CPU time consumed by the thread: 85 (millsec)

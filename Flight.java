@@ -1,6 +1,8 @@
 // Airline Travel Scheduler - Flight
 // Bongki Moon (bkmoon@snu.ac.kr)
 
+import java.util.Comparator;
+
 public class Flight {
 
     private Airport src, dest;
@@ -17,6 +19,7 @@ public class Flight {
         departureMin = Planner.getMinute(stime);
         arrivalMin = Planner.getMinute(dtime);
         interval = Planner.getInterval(departureMin, arrivalMin);
+        this.src.addFlight(this);
     }
 
     public void print() {
