@@ -1,10 +1,10 @@
 // Airline Travel Scheduler - Flight
 // Bongki Moon (bkmoon@snu.ac.kr)
 
-import java.util.Comparator;
 import java.util.HashSet;
 
-public class Flight {
+public class Flight{
+    public int elapseTime;
 
     private Airport src, dest;
     private String departureTime, arrivalTime;

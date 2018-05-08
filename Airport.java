@@ -4,7 +4,13 @@
 
 import java.util.*;
 
-public class Airport {
+public class Airport implements Comparable<Airport>{
+    /***used for dijkstra algorithm***/
+    public Airport prev = null;
+
+    public int elapseTime;
+
+    /*********************************/
 
     public static HashMap<String, Airport> portMap;
 
@@ -13,8 +19,8 @@ public class Airport {
     //entry contains flight heading to key airport
     private HashMap<Airport, HashSet<Flight>> flightSet;
 
-    private String portName;
-    private int connectionTime;
+    private final String portName;
+    private final int connectionTime;
 
     public Airport(String port, String connectTime) {
         flightSet = new HashMap<>();
@@ -31,6 +37,10 @@ public class Airport {
 
     public boolean canGoTo(Airport dest){
         return destList.contains(dest);
+    }
+
+    public HashSet<Airport> getDestList() {
+        return destList;
     }
 
     public Flight nextFlight(int time, Airport dest) {
@@ -84,4 +94,8 @@ public class Airport {
         return connectionTime;
     }
 
+    @Override
+    public int compareTo(Airport airport) {
+        return Integer.compare(this.elapseTime, airport.elapseTime);
+    }
 }
