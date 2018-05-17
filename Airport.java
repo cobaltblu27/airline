@@ -10,6 +10,7 @@ public class Airport implements Comparable<Airport>{
 
     public int elapseTime;
 
+    public int currentTime; 
     /*********************************/
 
     public static HashMap<String, Airport> portMap;
@@ -92,6 +93,12 @@ public class Airport implements Comparable<Airport>{
 
     public int getConnectTime() {
         return connectionTime;
+    }
+
+    public void initElapseTime(){//TODO there MUST be a better way
+        elapseTime = Integer.MAX_VALUE;
+        for(Airport dest: destList)
+            dest.initElapseTime();
     }
 
     @Override

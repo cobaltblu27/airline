@@ -33,17 +33,20 @@ public class Planner {
         if (flt != null) {
             return (Itinerary) flt;
         }
+
+        startAirport.initElapseTime();
         startAirport.elapseTime = 0;
+        startAirport.currentTime = departMin;
         flightQueue.add(startAirport);
         while (true) {
             Airport fastest = flightQueue.poll();//min value; airport with least elapseTime
             for(Airport dest: fastest.getDestList()){
-                
+                flt = fastest.nextFlight(fastest.currentTime, dest);
+                //TODO
             }
             if (visited.isEmpty())
                 break;
         }
-
 
         return new Itinerary(flights, true);
     }
