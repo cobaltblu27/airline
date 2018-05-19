@@ -42,7 +42,7 @@ public class Planner {
             Airport fastest = flightQueue.poll();//min value; airport with least elapseTime
             for(Airport dest: fastest.getDestList()){
                 flt = fastest.nextFlight(fastest.currentTime, dest);
-                //TODO
+
             }
             if (visited.isEmpty())
                 break;

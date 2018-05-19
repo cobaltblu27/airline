@@ -10,7 +10,7 @@ public class Airport implements Comparable<Airport>{
 
     public int elapseTime;
 
-    public int currentTime; 
+    public int currentTime;
     /*********************************/
 
     public static HashMap<String, Airport> portMap;

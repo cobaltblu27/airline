@@ -19,6 +19,11 @@ public class Itinerary extends Flight{
         this.flights = flights;
         this.found = found;
         flights.getFirst().getSrc().addFlight(this);
+        elapseTime = Planner.getInterval(departureMin, arrivalMin);
+    }
+
+    public LinkedList<Flight> getFlights() {
+        return flights;
     }
 
     public boolean isFound() {

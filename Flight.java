@@ -4,12 +4,11 @@
 import java.util.HashSet;
 
 public class Flight{
-    public int elapseTime;
+    int elapseTime;
 
     private Airport src, dest;
     private String departureTime, arrivalTime;
-    private int departureMin, arrivalMin;
-    private int interval;
+    int departureMin, arrivalMin;
 
     private HashSet<Flight> nextFlight;
 
@@ -22,7 +21,7 @@ public class Flight{
         this.arrivalTime = dtime;
         departureMin = Planner.getMinute(stime);
         arrivalMin = Planner.getMinute(dtime);
-        interval = Planner.getInterval(departureMin, arrivalMin);
+        elapseTime = Planner.getInterval(departureMin, arrivalMin);
     }
     public Flight(Airport src, Airport dest, int smin, int dmin){
         this.src = src;
@@ -37,10 +36,6 @@ public class Flight{
 
     public int getArrivalMin() {
         return arrivalMin;
-    }
-
-    private int getInterval() {
-        return interval;
     }
 
     public int getDepartureMin() {
