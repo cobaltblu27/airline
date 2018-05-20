@@ -1,5 +1,6 @@
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 // Airline Travel Scheduler - Planner
 // Bongki Moon (bkmoon@snu.ac.kr)
@@ -20,8 +21,13 @@ public class Planner {
 
     public Itinerary Schedule(String start, String end, String departure) {
         LinkedList<Flight> flights = new LinkedList<>();
+        //airportMinMap stores optimal flight to key airport
+        HashMap<Airport, Flight> airportMinMap = new HashMap<>();
+        //flightQueue is a min-heap for getting fastest flight every Dijkstra algorithm
+        //compares by value rather than key, which is made possible by airportMinMap above
         Queue<Flight> flightQueue
-                = new PriorityQueue<>(Comparator.comparing(Flight::getElapseTime));
+                = new PriorityQueue<>(Comparator.comparing(flt -> airportMinMap.get(flt).getElapseTime()));
+        //marks visited airport, may be unnecessary though
         HashSet<Airport> visited = new HashSet<>();
 
         Airport startAirport = Airport.portMap.get(start);
@@ -35,7 +41,7 @@ public class Planner {
         //contains itinerary that already has been calculated
         if (flt != null) return (Itinerary) flt;
 
-        Dijkstra(departMin, startAirport, destAirport, flightQueue, visited);
+        Dijkstra(departMin, startAirport, destAirport, flightQueue, visited, airportMinMap);
 
         return new Itinerary(flights, true);
     }
@@ -43,12 +49,19 @@ public class Planner {
     private void Dijkstra(int time, Airport st
             , Airport dest
             , Queue<Flight> flightQueue
-            , HashSet<Airport> visited) {
+            , HashSet<Airport> visited
+            , HashMap<Airport, Flight> airportMinMap) {
 
         while (true) {
             Flight fastest = flightQueue.poll();//min value; airport with least elapseTime
+            Airport fltDest = fastest.getDest();
+            if (fltDest.equals(dest)) {
+                //TODO
+            }
+            HashSet<Flight> nextSet = fltDest.allNextFlight(fastest.arrivalMin);
+            for (Flight flt : nextSet) {
 
-
+            }
             if (visited.isEmpty())
                 break;
         }

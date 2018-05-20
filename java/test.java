@@ -1,26 +1,15 @@
 import java.util.*;
+import java.util.stream.IntStream;
+import java.util.stream.Collectors;
 
 class test{
-    static Queue<num> q;
+    static HashSet<num> q;
+    static List<Integer> intSet;
     public static void main(String[] args){
-        q = new PriorityQueue<>(Comparator.comparing(num::getneg));
-        System.out.println("getneg:");
-        q.add(new num(1));
-        q.add(new num(2));
-        q.add(new num(3));
-        System.out.println(q.poll().getint());
-        System.out.println(q.poll().getint());
-        System.out.println(q.poll().getint());
-        System.out.println("getint:");
-        q = new PriorityQueue<>(Comparator.comparing(num::getint));
-        q.add(new num(1));
-        q.add(new num(2));
-        q.add(new num(3));
-        System.out.println(q.poll().getint());
-        System.out.println(q.poll().getint());
-        System.out.println(q.poll().getint());
+        q = IntStream.range(-10,-1).mapToObj(x -> new num(x)).filter(x -> x.getint() % 2 != 0).collect(Collectors.toCollection(HashSet::new));
+        intSet = q.stream().map(num::getneg).collect(Collectors.toList());
+        intSet.stream().forEach(System.out::println);
     }
-
 }
 
 class num{
