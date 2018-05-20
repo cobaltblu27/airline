@@ -5,7 +5,6 @@ import java.util.HashSet;
 
 public class Flight{
     int elapseTime;
-
     private Airport src, dest;
     private String departureTime, arrivalTime;
     int departureMin, arrivalMin;
@@ -50,4 +49,7 @@ public class Flight{
         return dest;
     }
 
+    public int getElapseTime(){
+        return elapseTime;
+    }
 }

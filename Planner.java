@@ -5,7 +5,7 @@ import java.util.*;
 // Bongki Moon (bkmoon@snu.ac.kr)
 
 public class Planner {
-
+    public static int DAY_MIN = 24 * 60;
     private LinkedList<Airport> portList;
     private LinkedList<Flight> fltList;
 
@@ -19,9 +19,9 @@ public class Planner {
     }
 
     public Itinerary Schedule(String start, String end, String departure) {
-        HashMap<Airport, Integer> intervalMap = new HashMap<>();
         LinkedList<Flight> flights = new LinkedList<>();
-        Queue<Airport> flightQueue = new PriorityQueue<>();
+        Queue<Flight> flightQueue
+                = new PriorityQueue<>(Comparator.comparing(Flight::getElapseTime));
         HashSet<Airport> visited = new HashSet<>();
 
         Airport startAirport = Airport.portMap.get(start);
@@ -34,16 +34,9 @@ public class Planner {
             return (Itinerary) flt;
         }
 
-        startAirport.initElapseTime();
-        startAirport.elapseTime = 0;
-        startAirport.currentTime = departMin;
-        flightQueue.add(startAirport);
         while (true) {
-            Airport fastest = flightQueue.poll();//min value; airport with least elapseTime
-            for(Airport dest: fastest.getDestList()){
-                flt = fastest.nextFlight(fastest.currentTime, dest);
+            Flight fastest = flightQueue.poll();//min value; airport with least elapseTime
 
-            }
             if (visited.isEmpty())
                 break;
         }
@@ -55,13 +48,20 @@ public class Planner {
         int minutes;
         minutes = Integer.parseInt(time.substring(2, 3));
         minutes += Integer.parseInt(time.substring(0, 1)) * 60;
-        if (minutes > 24 * 60)
-            minutes -= 24 * 60;
+        if (minutes > DAY_MIN)
+            minutes -= DAY_MIN;
         return minutes;
     }
 
     static int getInterval(int start, int end) {
-        return start < end ? end - start : end + 24 * 60 - start;
+        return start < end ? end - start : end + DAY_MIN - start;
+    }
+
+    private void Dijkstra(Airport st
+            , Airport dest
+            , Queue<Flight> flightQueue
+            , HashSet<Airport> visited) {
+        
     }
 
 }

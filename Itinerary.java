@@ -4,7 +4,7 @@
 
 import java.util.LinkedList;
 
-public class Itinerary extends Flight{
+public class Itinerary extends Flight {
 
     private LinkedList<Flight> flights;
     private boolean found;
@@ -19,7 +19,7 @@ public class Itinerary extends Flight{
         this.flights = flights;
         this.found = found;
         flights.getFirst().getSrc().addFlight(this);
-        elapseTime = Planner.getInterval(departureMin, arrivalMin);
+        setETime();
     }
 
     public LinkedList<Flight> getFlights() {
@@ -35,4 +35,16 @@ public class Itinerary extends Flight{
         System.out.println();
     }
 
+    private void setETime() {
+        elapseTime = 0;
+        int arrivaltime = Planner.DAY_MIN;
+        for (Flight flt : flights) {
+            if(flt.departureMin < arrivaltime)
+                elapseTime += Planner.DAY_MIN;
+            if (flt.getDepartureMin() > flt.getArrivalMin())
+                elapseTime += Planner.DAY_MIN;
+            arrivaltime = flt.getArrivalMin();
+        }
+        elapseTime  = elapseTime + arrivalMin - departureMin;
+    }
 }

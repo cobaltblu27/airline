@@ -4,7 +4,7 @@
 
 import java.util.*;
 
-public class Airport implements Comparable<Airport>{
+public class Airport{
     /***used for dijkstra algorithm***/
     public Airport prev = null;
 
@@ -93,16 +93,5 @@ public class Airport implements Comparable<Airport>{
 
     public int getConnectTime() {
         return connectionTime;
-    }
-
-    public void initElapseTime(){//TODO there MUST be a better way
-        elapseTime = Integer.MAX_VALUE;
-        for(Airport dest: destList)
-            dest.initElapseTime();
-    }
-
-    @Override
-    public int compareTo(Airport airport) {
-        return Integer.compare(this.elapseTime, airport.elapseTime);
     }
 }
