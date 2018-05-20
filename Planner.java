@@ -5,7 +5,7 @@ import java.util.*;
 // Bongki Moon (bkmoon@snu.ac.kr)
 
 public class Planner {
-    public static int DAY_MIN = 24 * 60;
+    public static final int DAY_MIN = 24 * 60;
     private LinkedList<Airport> portList;
     private LinkedList<Flight> fltList;
 
@@ -27,21 +27,31 @@ public class Planner {
         Airport startAirport = Airport.portMap.get(start);
         Airport destAirport = Airport.portMap.get(end);
         int departMin = getMinute(departure);
-        boolean found = false;
+
+        flightQueue.addAll(startAirport.allNextFlight(departMin));
 
         Flight flt = startAirport.nextFlight(departMin, destAirport);
-        if (flt != null) {
-            return (Itinerary) flt;
-        }
+
+        //contains itinerary that already has been calculated
+        if (flt != null) return (Itinerary) flt;
+
+        Dijkstra(departMin, startAirport, destAirport, flightQueue, visited);
+
+        return new Itinerary(flights, true);
+    }
+
+    private void Dijkstra(int time, Airport st
+            , Airport dest
+            , Queue<Flight> flightQueue
+            , HashSet<Airport> visited) {
 
         while (true) {
             Flight fastest = flightQueue.poll();//min value; airport with least elapseTime
 
+
             if (visited.isEmpty())
                 break;
         }
-
-        return new Itinerary(flights, true);
     }
 
     static int getMinute(String time) {
@@ -57,11 +67,5 @@ public class Planner {
         return start < end ? end - start : end + DAY_MIN - start;
     }
 
-    private void Dijkstra(Airport st
-            , Airport dest
-            , Queue<Flight> flightQueue
-            , HashSet<Airport> visited) {
-        
-    }
 
 }
