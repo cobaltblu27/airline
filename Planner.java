@@ -21,12 +21,13 @@ public class Planner {
 
     public Itinerary Schedule(String start, String end, String departure) {
         LinkedList<Flight> flights = new LinkedList<>();
+
         //airportMinMap stores optimal flight to key airport
         HashMap<Airport, Flight> airportMinMap = new HashMap<>();
+
         //flightQueue is a min-heap for getting fastest flight every Dijkstra algorithm
-        //compares by value rather than key, which is made possible by airportMinMap above
         Queue<Flight> flightQueue
-                = new PriorityQueue<>(Comparator.comparing(flt -> airportMinMap.get(flt).getElapseTime()));
+                = new PriorityQueue<>(Comparator.comparing(Flight::getElapseTime));
         //marks visited airport, may be unnecessary though
         HashSet<Airport> visited = new HashSet<>();
 
@@ -60,7 +61,7 @@ public class Planner {
             }
             HashSet<Flight> nextSet = fltDest.allNextFlight(fastest.arrivalMin);
             for (Flight flt : nextSet) {
-
+                airportMinMap.get(flt.getDest()).getElapseTime() 
             }
             if (visited.isEmpty())
                 break;

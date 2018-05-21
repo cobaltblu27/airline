@@ -2,7 +2,10 @@
 // Bongki Moon (bkmoon@snu.ac.kr)
 
 
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class Itinerary extends Flight {
 
@@ -22,6 +25,15 @@ public class Itinerary extends Flight {
         setETime();
     }
 
+    public Itinerary appendedNew(Flight flt) {
+//        if (arrivalMin + getDest().getConnectTime() > flt.getDepartureMin()) {
+//            //invalid, make exception
+//        }
+        LinkedList<Flight> newFltList = new LinkedList<>(flights);
+        newFltList.add(flt);
+        return new Itinerary(newFltList, true);
+    }
+
     public LinkedList<Flight> getFlights() {
         return flights;
     }
@@ -39,12 +51,12 @@ public class Itinerary extends Flight {
         elapseTime = 0;
         int arrivaltime = Planner.DAY_MIN;
         for (Flight flt : flights) {
-            if(flt.departureMin < arrivaltime)
+            if (flt.departureMin < arrivaltime)
                 elapseTime += Planner.DAY_MIN;
             if (flt.getDepartureMin() > flt.getArrivalMin())
                 elapseTime += Planner.DAY_MIN;
             arrivaltime = flt.getArrivalMin();
         }
-        elapseTime  = elapseTime + arrivalMin - departureMin;
+        elapseTime = elapseTime + arrivalMin - departureMin;
     }
 }
