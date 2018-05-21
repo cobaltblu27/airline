@@ -19,31 +19,29 @@ public class Planner {
         this.fltList = fltList;
     }
 
-    public Itinerary Schedule(String start, String end, String departure) {
-        LinkedList<Flight> flights = new LinkedList<>();
-
+    public Itinerary Schedule(String startStr, String endStr, String departure) {
         //airportMinMap stores optimal flight to key airport
         HashMap<Airport, Itinerary> airportMinMap = new HashMap<>();
 
         //flightQueue is a min-heap for getting fastest flight every Dijkstra algorithm
-        Queue<Itinerary> flightQueue
-                = new PriorityQueue<>(Comparator.comparing(Flight::getElapseTime));
+        Queue<Itinerary> flightQueue = new PriorityQueue<>(Comparator.comparing(Flight::getElapseTime));
 
-        Airport startAirport = Airport.portMap.get(start);
-        Airport destAirport = Airport.portMap.get(end);
+        Airport start = Airport.portMap.get(startStr);
+        Airport dest = Airport.portMap.get(endStr);
         int departMin = getMinute(departure);
 
-        startAirport.allNextFlight(departMin)
-                .stream().map(Itinerary::new).forEach(flightQueue::add);
+        for(Flight nextflt : start.allNextFlight(departMin)){
+            Itinerary it = new Itinerary(nextflt);
+            flightQueue.add(it);
+            airportMinMap.put(nextflt.getDest(), it);
+        }
 
-        //TODO: initialize airportMinMap
-
-        Flight flt = startAirport.nextFlight(departMin, destAirport);
+        Flight flt = start.nextFlight(departMin, dest);
 
         //contains itinerary that already has been calculated
         if (flt != null) return (Itinerary) flt;
 
-        return Dijkstra(destAirport, flightQueue, airportMinMap);
+        return Dijkstra(dest, flightQueue, airportMinMap);
     }
 
     private Itinerary Dijkstra(Airport dest
