@@ -2,9 +2,8 @@
 // Bongki Moon (bkmoon@snu.ac.kr)
 
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
+import java.lang.reflect.Array;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Itinerary extends Flight {
@@ -24,6 +23,12 @@ public class Itinerary extends Flight {
         flights.getFirst().getSrc().addFlight(this);
         setETime();
     }
+    Itinerary(Flight flt){
+        super(flt.getSrc(), flt.getDest(), flt.getDepartureMin(), flt.getArrivalMin());
+        flights = new LinkedList<>();
+        flights.add(flt);
+        found = true;
+    }
 
     public Itinerary appendedNew(Flight flt) {
 //        if (arrivalMin + getDest().getConnectTime() > flt.getDepartureMin()) {
@@ -32,6 +37,10 @@ public class Itinerary extends Flight {
         LinkedList<Flight> newFltList = new LinkedList<>(flights);
         newFltList.add(flt);
         return new Itinerary(newFltList, true);
+    }
+
+    public void append(Flight flt){
+        flights.add(flt);
     }
 
     public LinkedList<Flight> getFlights() {
