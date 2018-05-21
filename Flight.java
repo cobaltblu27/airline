@@ -22,6 +22,7 @@ public class Flight{
         arrivalMin = Planner.getMinute(dtime);
         elapseTime = Planner.getInterval(departureMin, arrivalMin);
     }
+
     public Flight(Airport src, Airport dest, int smin, int dmin){
         this.src = src;
         this.dest = dest;
@@ -30,7 +31,11 @@ public class Flight{
     }
 
     public void print() {
-        System.out.print("[" + src + "->" + dest + ":" + departureTime + "->" + arrivalTime + "]");
+        System.out.print("[");
+        src.print();
+        System.out.print("->");
+        dest.print();
+        System.out.print(":" + departureTime + "->" + arrivalTime + "]");
     }
 
     public int getArrivalMin() {

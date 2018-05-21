@@ -51,15 +51,12 @@ public class Planner {
 
         while (true) {
             Itinerary fastest = flightQueue.poll();//min value; airport with least elapseTime
-            if (fastest.getDest().equals(dest)) {
-                return fastest;
-            }
-
             Airport fltDest = fastest.getDest();
-            if (fltDest.equals(dest)) {
+            if (fltDest.equals(dest))
+                return fastest;
 
-            }
             HashSet<Flight> nextSet = fltDest.allNextFlight(fastest.arrivalMin);
+
             for (Flight flt : nextSet) {
                 Airport loopDest = flt.dest;
                 int etime = addElapseTime(fastest, flt);

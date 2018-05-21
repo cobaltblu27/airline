@@ -27,6 +27,7 @@ public class Airport {
     } // constructor
 
     /*TODO: make sure this works well, and also consider late starting, early arriving cases*/
+    /*TODO: also consider changing data structure of flights*/
     public void addFlight(Flight flt) {
         destList.add(flt.getDest());
         if (flightSet.keySet().contains(flt.getDest())) {
@@ -76,23 +77,15 @@ public class Airport {
     }
 
     public void print() {
-
+        System.out.print(portName);
     }
 
     public boolean canGoTo(Airport dest) {
         return destList.contains(dest);
     }
 
-    public HashSet<Airport> getDestList() {
-        return destList;
-    }
-
     @Override
     public int hashCode() {
         return portName.hashCode();
-    }
-
-    public int getConnectTime() {
-        return connectionTime;
     }
 }
