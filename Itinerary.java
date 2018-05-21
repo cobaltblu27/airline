@@ -2,9 +2,7 @@
 // Bongki Moon (bkmoon@snu.ac.kr)
 
 
-import java.lang.reflect.Array;
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class Itinerary extends Flight {
 
@@ -41,6 +39,9 @@ public class Itinerary extends Flight {
 
     public void append(Flight flt){
         flights.add(flt);
+        this.dest = flt.dest;
+        arrivalMin = flt.arrivalMin;
+        setETime();
     }
 
     public LinkedList<Flight> getFlights() {
