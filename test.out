@@ -1,25 +1,3 @@
 >> Source:LNY Destination:LIH Start_Time:1347
-
+[LNY->LIH:1050->1302]
 >> Source:LNY Destination:OGG Start_Time:1121
-
->> Source:KOA Destination:LIH Start_Time:0517
-
->> Source:JHM Destination:KOA Start_Time:2344
-
->> Source:MKK Destination:ITO Start_Time:1720
-
->> Source:OGG Destination:HNL Start_Time:1132
-
->> Source:LNY Destination:ITO Start_Time:1012
-
->> Source:ITO Destination:MKK Start_Time:0517
-
->> Source:OGG Destination:LNY Start_Time:1445
-
->> Source:ITO Destination:LIH Start_Time:0320
-
-
-Failed to find a flight schedule for 10 out of 10 customers
-Elapsed times: 1 (millsec) for planning, 2 (millisec) for scheduling
-Memory consumption: 2558536 bytes
-Total CPU time consumed by the thread: 85 (millsec)

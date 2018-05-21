@@ -39,7 +39,7 @@ public class Planner {
         Flight flt = start.nextFlight(departMin, dest);
 
         //contains itinerary that already has been calculated
-        if (flt != null) return (Itinerary) flt;
+        if (flt != null) return new Itinerary(flt);
 
         return Dijkstra(dest, flightQueue, airportMinMap);
     }
