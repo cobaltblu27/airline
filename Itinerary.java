@@ -4,25 +4,27 @@
 
 import java.util.*;
 
-public class Itinerary extends Flight {
+public class Itinerary{
 
     private LinkedList<Flight> flights;
+    private int elapseTime;
     private boolean found;
+    private int startTime;
+    private Airport dest;
+    private Airport src;
 
     // constructor
 
-    Itinerary(LinkedList<Flight> flights, boolean found) {
-        super(flights.getFirst().getSrc()
-                , flights.getLast().getDest()
-                , flights.getFirst().getDepartureMin()
-                , flights.getLast().getArrivalMin());
+    Itinerary(LinkedList<Flight> flights, int startTime, boolean found) {
         this.flights = flights;
         this.found = found;
-        flights.getFirst().getSrc().addFlight(this);
+        this.startTime = startTime;
+        src = flights.getFirst().getSrc();
+        dest = flights.getLast().getDest();
         setETime();
     }
+
     Itinerary(Flight flt){
-        super(flt.getSrc(), flt.getDest(), flt.getDepartureMin(), flt.getArrivalMin());
         flights = new LinkedList<>();
         flights.add(flt);
         found = true;
@@ -34,18 +36,13 @@ public class Itinerary extends Flight {
 //        }
         LinkedList<Flight> newFltList = new LinkedList<>(flights);
         newFltList.add(flt);
-        return new Itinerary(newFltList, true);
+        return new Itinerary(newFltList, startTime, true);
     }
 
     public void append(Flight flt){
         flights.add(flt);
-        this.dest = flt.dest;
-        arrivalMin = flt.arrivalMin;
+        this.dest = flt.getDest();
         setETime();
-    }
-
-    public LinkedList<Flight> getFlights() {
-        return flights;
     }
 
     public boolean isFound() {
@@ -67,6 +64,25 @@ public class Itinerary extends Flight {
                 elapseTime += Planner.DAY_MIN;
             arrivaltime = flt.getArrivalMin();
         }
-        elapseTime = elapseTime + arrivalMin - departureMin;
+        elapseTime = elapseTime + arrivalMin() - departureMin();
+    }
+
+    public Airport dest(){
+        return flights.getLast().getDest();
+    }
+    public Airport src(){
+        return flights.getFirst().getSrc();
+    }
+
+    public int arrivalMin(){
+        return flights.getLast().getArrivalMin();
+    }
+
+    public int departureMin(){
+        return flights.getFirst().getDepartureMin();
+    }
+
+    public int getElapseTime(){
+        return elapseTime;
     }
 }

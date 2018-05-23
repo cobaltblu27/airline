@@ -53,20 +53,15 @@ public class Airport {
         }
     }
 
-    public Flight nextConnect(int time, Airport dest) {
-        int connect = (time + connectionTime > Planner.DAY_MIN) ?
-                time + connectionTime - Planner.DAY_MIN : time + connectionTime;
-        return nextFlight(connect, dest);
-    }
-
-    public Flight nextFlight(int time, Airport dest) {
+    public Flight nextFlight(int time, Airport dest, boolean connect) {
         if (!flightSet.keySet().contains(dest))
             return null;
         Flight fastestFlight = null;
         int minInterval = Planner.DAY_MIN;
         for (Flight flt : flightSet.get(dest)) {
             int interval = Planner.getInterval(time, flt.getArrivalMin());
-            if (interval < minInterval) {
+            if (interval < minInterval
+                    && (!connect || Planner.getInterval(time, flt.getDepartureMin()) > connectionTime)) {
                 minInterval = interval;
                 fastestFlight = flt;
             }
@@ -74,10 +69,10 @@ public class Airport {
         return fastestFlight;
     }
 
-    public HashSet<Flight> allNextFlight(int time) {
+    public HashSet<Flight> allNextFlight(int time, boolean connect) {
         HashSet<Flight> nextSet = new HashSet<>();
         for (Airport dest : destList) {
-            nextSet.add(nextFlight(time, dest));
+            nextSet.add(nextFlight(time, dest, connect));
         }
         return nextSet;
     }

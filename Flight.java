@@ -4,9 +4,9 @@
 import java.util.HashSet;
 
 public class Flight{
-    int elapseTime;
-    protected Airport src, dest;
-    protected String departureTime, arrivalTime;
+    private int elapseTime;
+    private Airport src, dest;
+    private String departureTime, arrivalTime;
     int departureMin, arrivalMin;
 
     private HashSet<Flight> nextFlight;

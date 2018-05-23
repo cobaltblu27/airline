@@ -1,3 +1,17 @@
 >> Source:LNY Destination:LIH Start_Time:1347
 [LNY->LIH:1435->1727]
 >> Source:LNY Destination:OGG Start_Time:1121
+[LNY->HNL:1435->1505][HNL->MKK:1820->1845][MKK->OGG:0655->0720]
+>> Source:KOA Destination:LIH Start_Time:0517
+[KOA->LIH:0628->0805]
+>> Source:JHM Destination:KOA Start_Time:2344
+[JHM->HNL:1148->2420][HNL->LIH:0530->0607][LIH->KOA:0720->0917]
+>> Source:MKK Destination:ITO Start_Time:1720
+[MKK->ITO:1615->2001]
+>> Source:OGG Destination:HNL Start_Time:1132
+[OGG->HNL:1105->1139]
+>> Source:LNY Destination:ITO Start_Time:1012
+[LNY->ITO:1050->1529]
+>> Source:ITO Destination:MKK Start_Time:0517
+[ITO->MKK:1108->1430]
+>> Source:OGG Destination:LNY Start_Time:1445

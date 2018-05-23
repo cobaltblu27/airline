@@ -24,19 +24,19 @@ public class Planner {
         HashMap<Airport, Itinerary> airportMinMap = new HashMap<>();
 
         //flightQueue is a min-heap for getting fastest flight every Dijkstra algorithm
-        Queue<Itinerary> flightQueue = new PriorityQueue<>(Comparator.comparing(Flight::getElapseTime));
+        Queue<Itinerary> flightQueue = new PriorityQueue<>(Comparator.comparing(Itinerary::getElapseTime));
 
         Airport start = Airport.portMap.get(startStr);
         Airport dest = Airport.portMap.get(endStr);
         int departMin = getMinute(departure);
 
-        for(Flight nextflt : start.allNextFlight(departMin)){
+        for (Flight nextflt : start.allNextFlight(departMin, false)) {
             Itinerary it = new Itinerary(nextflt);
             flightQueue.add(it);
             airportMinMap.put(nextflt.getDest(), it);
         }
 
-        Flight flt = start.nextFlight(departMin, dest);
+        Flight flt = start.nextFlight(departMin, dest, false);
 
         //contains itinerary that already has been calculated
         if (flt != null) return new Itinerary(flt);
@@ -46,23 +46,23 @@ public class Planner {
 
     private Itinerary Dijkstra(Airport dest
             , Queue<Itinerary> flightQueue
-            , HashMap<Airport
-            , Itinerary> airportMinMap) {
+            , HashMap<Airport, Itinerary> airportMinMap) {
 
         while (true) {
             Itinerary fastest = flightQueue.poll();//min value; airport with least elapseTime
-            Airport fltDest = fastest.getDest();
+            Airport fltDest = fastest.dest();
             if (fltDest.equals(dest))
                 return fastest;
 
-            HashSet<Flight> nextSet = fltDest.allNextFlight(fastest.arrivalMin);
+            HashSet<Flight> nextSet = fltDest.allNextFlight(fastest.arrivalMin(), true);
 
             for (Flight flt : nextSet) {
-                Airport loopDest = flt.dest;
+                Airport loopDest = flt.getDest();
                 int etime = addElapseTime(fastest, flt);
-                if (etime < airportMinMap.get(loopDest).getElapseTime()
-                        || !airportMinMap.containsKey(loopDest)) {
+                if (!airportMinMap.containsKey(loopDest)
+                        || etime < airportMinMap.get(loopDest).getElapseTime()) {
                     /* make new itinerary that is better than one stored in map*/
+                    //TODO answer iter not added
                     Itinerary newIter = fastest.appendedNew(flt);
                     airportMinMap.put(loopDest, newIter);
                     flightQueue.add(newIter);
@@ -73,7 +73,7 @@ public class Planner {
 
     private static int addElapseTime(Itinerary it, Flight flt) {
         int elapse = it.getElapseTime();
-        elapse += getInterval(it.getArrivalMin(), flt.getDepartureMin());
+        elapse += getInterval(it.arrivalMin(), flt.getDepartureMin());
         return elapse;
     }
 
