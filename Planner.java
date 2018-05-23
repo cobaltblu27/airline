@@ -79,8 +79,8 @@ public class Planner {
 
     static int getMinute(String time) {
         int minutes;
-        minutes = Integer.parseInt(time.substring(2, 3));
-        minutes += Integer.parseInt(time.substring(0, 1)) * 60;
+        minutes = Integer.parseInt(time.substring(2, 4));
+        minutes += Integer.parseInt(time.substring(0, 2)) * 60;
         if (minutes > DAY_MIN)
             minutes -= DAY_MIN;
         return minutes;
