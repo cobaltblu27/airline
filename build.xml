@@ -1,0 +1,9 @@
+<project>
+
+    <target name="clean">
+        <delete dir="./">
+    </target>
+
+    <target name="jar">
+        <mkdir dir="./src/">
+        <jar destfile=""

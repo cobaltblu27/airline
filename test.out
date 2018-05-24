@@ -15,3 +15,11 @@
 >> Source:ITO Destination:MKK Start_Time:0517
 [ITO->MKK:1108->1430]
 >> Source:OGG Destination:LNY Start_Time:1445
+[OGG->ITO:0905->0941][ITO->LNY:1108->1415]
+>> Source:ITO Destination:LIH Start_Time:0320
+[ITO->LIH:0643->0857]
+
+Failed to find a flight schedule for 0 out of 10 customers
+Elapsed times: 3 (millsec) for planning, 76 (millisec) for scheduling
+Memory consumption: 3840400 bytes
+Total CPU time consumed by the thread: 157 (millsec)

@@ -9,11 +9,8 @@ public class Flight{
     private String departureTime, arrivalTime;
     int departureMin, arrivalMin;
 
-    private HashSet<Flight> nextFlight;
-
     // constructor
     public Flight(String src, String dest, String stime, String dtime) {
-        nextFlight = new HashSet<>();
         this.src = Airport.portMap.get(src);
         this.dest = Airport.portMap.get(dest);
         this.departureTime = stime;

@@ -72,7 +72,9 @@ public class Airport {
     public HashSet<Flight> allNextFlight(int time, boolean connect) {
         HashSet<Flight> nextSet = new HashSet<>();
         for (Airport dest : destList) {
-            nextSet.add(nextFlight(time, dest, connect));
+            Flight next = nextFlight(time, dest, connect);
+            if (next != null)
+                nextSet.add(nextFlight(time, dest, connect));
         }
         return nextSet;
     }

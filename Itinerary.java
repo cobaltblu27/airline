@@ -55,14 +55,14 @@ public class Itinerary{
     }
 
     private void setETime() {
-        elapseTime = 0;
-        int arrivaltime = Planner.DAY_MIN;
+        elapseTime = Planner.getInterval(startTime, departureMin());
+        int arrivalTime = Planner.DAY_MIN;
         for (Flight flt : flights) {
-            if (flt.departureMin < arrivaltime)
+            if (flt.departureMin < arrivalTime)
                 elapseTime += Planner.DAY_MIN;
             if (flt.getDepartureMin() > flt.getArrivalMin())
                 elapseTime += Planner.DAY_MIN;
-            arrivaltime = flt.getArrivalMin();
+            arrivalTime = flt.getArrivalMin();
         }
         elapseTime = elapseTime + arrivalMin() - departureMin();
     }
