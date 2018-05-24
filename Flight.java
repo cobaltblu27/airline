@@ -7,7 +7,7 @@ public class Flight{
     private int elapseTime;
     private Airport src, dest;
     private String departureTime, arrivalTime;
-    int departureMin, arrivalMin;
+    private int departureMin, arrivalMin;
 
     // constructor
     public Flight(String src, String dest, String stime, String dtime) {

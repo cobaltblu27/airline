@@ -28,8 +28,8 @@ public class Planner {
         HashMap<Airport, Itinerary> airportMinMap = new HashMap<>();
 
         //flightQueue is a min-heap for getting fastest flight every Dijkstra algorithm
-        Function<Itinerary, Integer> fn = itinerary -> itinerary.getElapseTime(departMin);
-        Queue<Itinerary> flightQueue = new PriorityQueue<>(Comparator.comparing(fn));
+        Function<Itinerary, Integer> compareF = itinerary -> itinerary.getElapseTime(departMin);
+        Queue<Itinerary> flightQueue = new PriorityQueue<>(Comparator.comparing(compareF));
 
         Airport start = Airport.portMap.get(startStr);
         Airport dest = Airport.portMap.get(endStr);
@@ -53,7 +53,9 @@ public class Planner {
             , HashMap<Airport, Itinerary> airportMinMap) {
 
         while (true) {
+            //TODO real fastest itinerary isn't coming out
             Itinerary fastest = flightQueue.poll();//min value; airport with least elapseTime
+            fastest.print();
             Airport fltDest = fastest.dest();
             if (fltDest.equals(dest))
                 return fastest;

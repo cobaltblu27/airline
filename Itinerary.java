@@ -4,7 +4,7 @@
 
 import java.util.*;
 
-public class Itinerary{
+public class Itinerary {
 
     private LinkedList<Flight> flights;
     private int elapseTime;
@@ -22,7 +22,7 @@ public class Itinerary{
         setETime();
     }
 
-    Itinerary(Flight flt){
+    Itinerary(Flight flt) {
         flights = new LinkedList<>();
         flights.add(flt);
         found = true;
@@ -37,7 +37,7 @@ public class Itinerary{
         return new Itinerary(newFltList, true);
     }
 
-    public void append(Flight flt){
+    public void append(Flight flt) {
         flights.add(flt);
         this.dest = flt.getDest();
         setETime();
@@ -54,34 +54,36 @@ public class Itinerary{
 
     private void setETime() {//TODO wrong
         elapseTime = 0;
-        int arrivalTime = Planner.DAY_MIN;
+        int arrivalTime = 0;
         for (Flight flt : flights) {
-            if (flt.departureMin < arrivalTime)
+            if (arrivalTime > flt.getDepartureMin())
                 elapseTime += Planner.DAY_MIN;
+
             if (flt.getDepartureMin() > flt.getArrivalMin())
                 elapseTime += Planner.DAY_MIN;
+
             arrivalTime = flt.getArrivalMin();
         }
         elapseTime = elapseTime + arrivalMin() - departureMin();
-        print();System.out.println(elapseTime);
     }
 
-    public Airport dest(){
+    public Airport dest() {
         return flights.getLast().getDest();
     }
-    public Airport src(){
+
+    public Airport src() {
         return flights.getFirst().getSrc();
     }
 
-    public int arrivalMin(){
+    public int arrivalMin() {
         return flights.getLast().getArrivalMin();
     }
 
-    public int departureMin(){
+    public int departureMin() {
         return flights.getFirst().getDepartureMin();
     }
 
-    public int getElapseTime(int start){
+    public int getElapseTime(int start) {
         return elapseTime + Planner.getInterval(start, flights.getFirst().getDepartureMin());
     }
 }
