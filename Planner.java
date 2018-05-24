@@ -1,6 +1,7 @@
 
 
 import java.util.*;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 // Airline Travel Scheduler - Planner
@@ -21,15 +22,17 @@ public class Planner {
     }
 
     public Itinerary Schedule(String startStr, String endStr, String departure) {
+        int departMin = getMinute(departure);
+
         //airportMinMap stores optimal flight to key airport
         HashMap<Airport, Itinerary> airportMinMap = new HashMap<>();
 
         //flightQueue is a min-heap for getting fastest flight every Dijkstra algorithm
-        Queue<Itinerary> flightQueue = new PriorityQueue<>(Comparator.comparing(Itinerary::getElapseTime));
+        Function<Itinerary, Integer> fn = itinerary -> itinerary.getElapseTime(departMin);
+        Queue<Itinerary> flightQueue = new PriorityQueue<>(Comparator.comparing(fn));
 
         Airport start = Airport.portMap.get(startStr);
         Airport dest = Airport.portMap.get(endStr);
-        int departMin = getMinute(departure);
 
         for (Flight nextflt : start.allNextFlight(departMin, false)) {
             Itinerary it = new Itinerary(nextflt);
@@ -42,10 +45,10 @@ public class Planner {
         //contains itinerary that already has been calculated
         if (flt != null) return new Itinerary(flt);
 
-        return Dijkstra(dest, flightQueue, airportMinMap);
+        return Dijkstra(departMin, dest, flightQueue, airportMinMap);
     }
 
-    private Itinerary Dijkstra(Airport dest
+    private Itinerary Dijkstra(int start, Airport dest
             , Queue<Itinerary> flightQueue
             , HashMap<Airport, Itinerary> airportMinMap) {
 
@@ -59,23 +62,18 @@ public class Planner {
 
             for (Flight flt : nextSet) {
                 Airport loopDest = flt.getDest();
-                int etime = addElapseTime(fastest, flt);
+                int etime = fastest.getElapseTime(start)
+                        + getInterval(fastest.arrivalMin(), flt.getDepartureMin());
+
                 if (!airportMinMap.containsKey(loopDest)
-                        || etime < airportMinMap.get(loopDest).getElapseTime()) {
+                        || etime < airportMinMap.get(loopDest).getElapseTime(start)) {
                     /* make new itinerary that is better than one stored in map*/
-                    //TODO answer iter not added
                     Itinerary newIter = fastest.appendedNew(flt);
                     airportMinMap.put(loopDest, newIter);
                     flightQueue.add(newIter);
                 }
             }
         }
-    }
-
-    private static int addElapseTime(Itinerary it, Flight flt) {
-        int elapse = it.getElapseTime();
-        elapse += getInterval(it.arrivalMin(), flt.getDepartureMin());
-        return elapse;
     }
 
     static int getMinute(String time) {

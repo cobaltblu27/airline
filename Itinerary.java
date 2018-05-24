@@ -9,16 +9,14 @@ public class Itinerary{
     private LinkedList<Flight> flights;
     private int elapseTime;
     private boolean found;
-    private int startTime;
     private Airport dest;
     private Airport src;
 
     // constructor
 
-    Itinerary(LinkedList<Flight> flights, int startTime, boolean found) {
+    Itinerary(LinkedList<Flight> flights, boolean found) {
         this.flights = flights;
         this.found = found;
-        this.startTime = startTime;
         src = flights.getFirst().getSrc();
         dest = flights.getLast().getDest();
         setETime();
@@ -36,7 +34,7 @@ public class Itinerary{
 //        }
         LinkedList<Flight> newFltList = new LinkedList<>(flights);
         newFltList.add(flt);
-        return new Itinerary(newFltList, startTime, true);
+        return new Itinerary(newFltList, true);
     }
 
     public void append(Flight flt){
@@ -54,8 +52,8 @@ public class Itinerary{
         System.out.println();
     }
 
-    private void setETime() {
-        elapseTime = Planner.getInterval(startTime, departureMin());
+    private void setETime() {//TODO wrong
+        elapseTime = 0;
         int arrivalTime = Planner.DAY_MIN;
         for (Flight flt : flights) {
             if (flt.departureMin < arrivalTime)
@@ -65,6 +63,7 @@ public class Itinerary{
             arrivalTime = flt.getArrivalMin();
         }
         elapseTime = elapseTime + arrivalMin() - departureMin();
+        print();System.out.println(elapseTime);
     }
 
     public Airport dest(){
@@ -82,7 +81,7 @@ public class Itinerary{
         return flights.getFirst().getDepartureMin();
     }
 
-    public int getElapseTime(){
-        return elapseTime;
+    public int getElapseTime(int start){
+        return elapseTime + Planner.getInterval(start, flights.getFirst().getDepartureMin());
     }
 }
