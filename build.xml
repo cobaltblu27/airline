@@ -1,9 +1,8 @@
 <project name="airline" default="compile" basedir=".">
     
     <target name="compile">
-        <echo>compiling..</echo>
         <mkdir dir="bin" />
-        <javac srcdir="." destdir="./bin" includes="*.java" />
+        <javac includeantruntime="false" srcdir="./src" destdir="./bin" includes="*.java" />
     </target>
 
     <target name="clean">
