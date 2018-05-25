@@ -3,12 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="cdd2433c-b369-4edf-a150-383420eace8c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Flight.class" afterPath="$PROJECT_DIR$/Flight.class" />
-      <change beforePath="$PROJECT_DIR$/Flight.java" afterPath="$PROJECT_DIR$/Flight.java" />
-      <change beforePath="$PROJECT_DIR$/Itinerary.class" afterPath="$PROJECT_DIR$/Itinerary.class" />
       <change beforePath="$PROJECT_DIR$/Itinerary.java" afterPath="$PROJECT_DIR$/Itinerary.java" />
       <change beforePath="$PROJECT_DIR$/Planner.java" afterPath="$PROJECT_DIR$/Planner.java" />
-      <change beforePath="$PROJECT_DIR$/test.out" afterPath="$PROJECT_DIR$/test.out" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,12 +21,12 @@
           <file leaf-file-name="Planner.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Planner.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="342">
-                  <caret line="34" column="39" lean-forward="false" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
+                <state relative-caret-position="333">
+                  <caret line="58" column="27" lean-forward="true" selection-start-line="58" selection-start-column="27" selection-end-line="58" selection-end-column="27" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#3204#3205#0" expanded="true" />
-                    <element signature="e#3276#3277#0" expanded="true" />
+                    <element signature="e#3362#3363#0" expanded="true" />
+                    <element signature="e#3434#3435#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -39,11 +35,11 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="Airport.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Airport.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="702">
+                <state relative-caret-position="1332">
                   <caret line="75" column="29" lean-forward="false" selection-start-line="75" selection-start-column="29" selection-end-line="75" selection-end-column="29" />
                   <folding>
                     <element signature="e#0#3253#0" expanded="true" />
@@ -55,19 +51,29 @@
           <file leaf-file-name="Itinerary.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Itinerary.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="489">
-                  <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+                <state relative-caret-position="167">
+                  <caret line="54" column="29" lean-forward="false" selection-start-line="54" selection-start-column="29" selection-end-line="54" selection-end-column="29" />
                   <folding>
-                    <element signature="e#0#2275#0" expanded="true" />
-                    <element signature="e#1821#1822#0" expanded="true" />
-                    <element signature="e#1871#1872#0" expanded="true" />
-                    <element signature="e#1899#1900#0" expanded="true" />
-                    <element signature="e#1949#1950#0" expanded="true" />
-                    <element signature="e#1980#1981#0" expanded="true" />
-                    <element signature="e#2036#2037#0" expanded="true" />
-                    <element signature="e#2069#2070#0" expanded="true" />
-                    <element signature="e#2128#2129#0" expanded="true" />
+                    <element signature="e#0#2206#0" expanded="true" />
+                    <element signature="e#1752#1753#0" expanded="true" />
+                    <element signature="e#1802#1803#0" expanded="true" />
+                    <element signature="e#1830#1831#0" expanded="true" />
+                    <element signature="e#1880#1881#0" expanded="true" />
+                    <element signature="e#1911#1912#0" expanded="true" />
+                    <element signature="e#1967#1968#0" expanded="true" />
+                    <element signature="e#2000#2001#0" expanded="true" />
+                    <element signature="e#2059#2060#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="MainAir.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/MainAir.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="918">
+                  <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -110,9 +116,9 @@
         <option value="$PROJECT_DIR$/src/Airport.java" />
         <option value="$PROJECT_DIR$/src/Planner.java" />
         <option value="$PROJECT_DIR$/Airport.java" />
-        <option value="$PROJECT_DIR$/Planner.java" />
         <option value="$PROJECT_DIR$/Flight.java" />
         <option value="$PROJECT_DIR$/Itinerary.java" />
+        <option value="$PROJECT_DIR$/Planner.java" />
       </list>
     </option>
   </component>
@@ -306,12 +312,13 @@
       <workItem from="1527048701606" duration="11000" />
       <workItem from="1527049131477" duration="10039000" />
       <workItem from="1527142460847" duration="206000" />
-      <workItem from="1527149862820" duration="3301000" />
+      <workItem from="1527149862820" duration="5767000" />
+      <workItem from="1527163799337" duration="159000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74471000" />
+    <option name="totallyTimeSpent" value="77096000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="260" y="22" width="1922" height="1092" extended-state="6" />
@@ -319,7 +326,6 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -342,6 +348,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -383,30 +390,39 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Itinerary.java</url>
-          <line>58</line>
-          <properties />
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Itinerary.java</url>
-          <line>61</line>
-          <properties />
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="6" />
+      <option name="time" value="11" />
     </breakpoint-manager>
-    <watches-manager />
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="flt.getDepartureMin()" language="JAVA" />
+        <watch expression="flt.getArrivalMin()" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
     <buildFile url="file://$PROJECT_DIR$/build.xml">
+      <targetFilters>
+        <filter targetName="clean" isVisible="false" />
+        <filter targetName="jar" isVisible="false" />
+      </targetFilters>
       <expanded value="true" />
     </buildFile>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="watch">
+      <expression>
+        <expression-string>flt.getArrivalMin()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>flt.getDepartureMin()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Itinerary.java" />
@@ -451,57 +467,16 @@
     <entry file="file://$PROJECT_DIR$/Planner.java" />
     <entry file="file://$PROJECT_DIR$/Flight.java" />
     <entry file="file://$PROJECT_DIR$/Airport.java" />
-    <entry file="file://$PROJECT_DIR$/MainAir.java" />
-    <entry file="file://$PROJECT_DIR$/src/Itinerary.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Flight.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Airport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="19" lean-forward="false" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Planner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="15" lean-forward="false" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Itinerary.java" />
+    <entry file="file://$PROJECT_DIR$/src/Flight.java" />
+    <entry file="file://$PROJECT_DIR$/src/Airport.java" />
+    <entry file="file://$PROJECT_DIR$/src/Planner.java" />
     <entry file="file://$PROJECT_DIR$/Airport.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
+        <state relative-caret-position="1332">
           <caret line="75" column="29" lean-forward="false" selection-start-line="75" selection-start-column="29" selection-end-line="75" selection-end-column="29" />
           <folding>
             <element signature="e#0#3253#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Planner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="34" column="39" lean-forward="false" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3204#3205#0" expanded="true" />
-            <element signature="e#3276#3277#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -514,20 +489,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/MainAir.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Itinerary.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+        <state relative-caret-position="167">
+          <caret line="54" column="29" lean-forward="false" selection-start-line="54" selection-start-column="29" selection-end-line="54" selection-end-column="29" />
           <folding>
-            <element signature="e#0#2275#0" expanded="true" />
-            <element signature="e#1821#1822#0" expanded="true" />
-            <element signature="e#1871#1872#0" expanded="true" />
-            <element signature="e#1899#1900#0" expanded="true" />
-            <element signature="e#1949#1950#0" expanded="true" />
-            <element signature="e#1980#1981#0" expanded="true" />
-            <element signature="e#2036#2037#0" expanded="true" />
-            <element signature="e#2069#2070#0" expanded="true" />
-            <element signature="e#2128#2129#0" expanded="true" />
+            <element signature="e#0#2206#0" expanded="true" />
+            <element signature="e#1752#1753#0" expanded="true" />
+            <element signature="e#1802#1803#0" expanded="true" />
+            <element signature="e#1830#1831#0" expanded="true" />
+            <element signature="e#1880#1881#0" expanded="true" />
+            <element signature="e#1911#1912#0" expanded="true" />
+            <element signature="e#1967#1968#0" expanded="true" />
+            <element signature="e#2000#2001#0" expanded="true" />
+            <element signature="e#2059#2060#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Planner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="58" column="27" lean-forward="true" selection-start-line="58" selection-start-column="27" selection-end-line="58" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3362#3363#0" expanded="true" />
+            <element signature="e#3434#3435#0" expanded="true" />
           </folding>
         </state>
       </provider>

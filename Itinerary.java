@@ -52,7 +52,7 @@ public class Itinerary {
         System.out.println();
     }
 
-    private void setETime() {//TODO wrong
+    private void setETime() {
         elapseTime = 0;
         int arrivalTime = 0;
         for (Flight flt : flights) {

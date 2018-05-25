@@ -40,11 +40,6 @@ public class Planner {
             airportMinMap.put(nextflt.getDest(), it);
         }
 
-        Flight flt = start.nextFlight(departMin, dest, false);
-
-        //contains itinerary that already has been calculated
-        if (flt != null) return new Itinerary(flt);
-
         return Dijkstra(departMin, dest, flightQueue, airportMinMap);
     }
 
@@ -53,9 +48,7 @@ public class Planner {
             , HashMap<Airport, Itinerary> airportMinMap) {
 
         while (true) {
-            //TODO real fastest itinerary isn't coming out
             Itinerary fastest = flightQueue.poll();//min value; airport with least elapseTime
-            fastest.print();
             Airport fltDest = fastest.dest();
             if (fltDest.equals(dest))
                 return fastest;

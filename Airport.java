@@ -53,19 +53,20 @@ public class Airport {
         }
     }
 
+    //TODO not working
     public Flight nextFlight(int time, Airport dest, boolean connect) {
         if (!flightSet.keySet().contains(dest))
             return null;
         Flight fastestFlight = null;
         int minInterval = Planner.DAY_MIN;
         for (Flight flt : flightSet.get(dest)) {
-            int interval = Planner.getInterval(time, flt.getArrivalMin());
+            int interval = Planner.getInterval(time, flt.getDepartureMin()) + flt.getElapseTime();
             if (interval < minInterval
                     && (!connect || Planner.getInterval(time, flt.getDepartureMin()) > connectionTime)) {
                 minInterval = interval;
                 fastestFlight = flt;
             }
-        }//System.out.println(time + fastestFlight.departureMin);
+        }
         return fastestFlight;
     }
 
