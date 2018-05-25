@@ -14,6 +14,17 @@
             </fileset>
         </delete>
     </target>
+    
+    <target name="run">
+        <java dir="./bin" classname="MainAir" fork="true"> 
+            <arg value="../public/Alaska-airports.txt"/>
+            <arg value="../public/Alaska-flights.txt"/>
+            <arg value="../public/Alaska-customers2000.txt"/>
+            <classpath>
+                <pathelement location="./bin"/>
+            </classpath>
+        </java>
+    </target>
 
     <target name="jar">
         <mkdir dir="./src/" />
