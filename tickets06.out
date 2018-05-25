@@ -1,0 +1,21 @@
+>> Source:CUN Destination:BTR Start_Time:0500
+[CUN->LAX:1841->2136][LAX->DFW:0020->0515][DFW->BTR:0720->0840]
+>> Source:OTZ Destination:ANC Start_Time:0149
+[OTZ->ANC:0829->1124]
+>> Source:MSY Destination:MIA Start_Time:1638
+[MSY->LAX:1700->1902][LAX->MIA:2045->0450]
+>> Source:YYC Destination:LBB Start_Time:1724
+[YYC->SEA:1745->1837][SEA->SFO:2050->2259][SFO->DFW:0020->0530][DFW->LBB:0740->0840]
+>> Source:OMA Destination:FAT Start_Time:0127
+[OMA->MSP:0510->0625][MSP->LAX:0903->1057][LAX->FAT:1430->1525]
+>> Source:LGA Destination:BNA Start_Time:1906
+[LGA->ORD:0610->0735][ORD->BNA:1000->1125]
+>> Source:AVP Destination:ORD Start_Time:1636
+[AVP->ORD:0740->0900]
+>> Source:MCI Destination:HOM Start_Time:1804
+[MCI->ORD:1810->1940][ORD->ANC:0940->1327][ANC->HOM:1445->1525]
+>> Source:ELP Destination:MAF Start_Time:1034
+[ELP->DFW:1045->1330][DFW->MAF:1645->1750]
+>> Source:LAP Destination:ADK Start_Time:0923
+[LAP->LAX:1433->1623][LAX->SEA:1815->2049][SEA->ANC:2345->0221][ANC->ADK:1450->1654]
+>> Source:OME Destination:STG Start_Time:0403

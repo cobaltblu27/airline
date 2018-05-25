@@ -55,7 +55,7 @@ public class Planner {
 
             HashSet<Flight> nextSet = fltDest.allNextFlight(fastest.arrivalMin(), true);
 
-            for (Flight flt : nextSet) {
+            for (Flight flt : nextSet) {//TODO nextSet has null entry
                 Airport loopDest = flt.getDest();
                 int etime = fastest.getElapseTime(start)
                         + getInterval(fastest.arrivalMin(), flt.getDepartureMin());

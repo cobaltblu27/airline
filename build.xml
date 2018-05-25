@@ -1,9 +1,23 @@
-<project>
+<project name="airline" default="compile" basedir=".">
+    
+    <target name="compile">
+        <echo>compiling..</echo>
+        <mkdir dir="bin" />
+        <javac srcdir="." destdir="./bin" includes="*.java" />
+    </target>
 
     <target name="clean">
-        <delete dir="./">
+        <delete dir="./bin" />
+        <delete>
+            <fileset dir=".">
+                <include name="*.class" />
+            </fileset>
+        </delete>
     </target>
 
     <target name="jar">
-        <mkdir dir="./src/">
-        <jar destfile=""
+        <mkdir dir="./src/" />
+        <jar destfile="" />
+    </target>
+	  
+</project>

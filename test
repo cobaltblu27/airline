@@ -1,1 +1,1 @@
-java MainAir public/Hawaiian-airports.txt public/Hawaiian-flights.txt public/Hawaiian-customers10.txt | tee test.out
+java MainAir public/Alaska-airports.txt public/Alaska-flights.txt public/Alaska-customers2000.txt | tee tickets06.out
