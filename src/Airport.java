@@ -26,31 +26,11 @@ public class Airport {
         portMap.put(port, this);
     } // constructor
 
-    //TODO: consider late starting, early arriving cases
     public void addFlight(Flight flt) {
         destList.add(flt.getDest());
-        if (flightSet.keySet().contains(flt.getDest())) {
-//            HashSet<Flight> flights = flightSet.get(flt.getDest());
-//            Flight remove = null;
-//            for (Flight setflt : flights) {//flight list should have no two flights departing at same time
-//                if (setflt.getDepartureMin() == flt.getDepartureMin()) {
-//                    remove = setflt;
-//                    break;
-//                }
-//            }
-//            if (remove != null) {//check if flights departing at same time exists
-//                if (Planner.getInterval(flt.getArrivalMin(), remove.getArrivalMin()) < 12 * 60) {
-//                    //check if new flight arrives faster
-//                    flights.remove(remove);
-//                    flights.add(flt);
-//                }
-//            } else// no flight at same departing time
-//                flights.add(flt);
-            flightSet.get(flt.getDest()).add(flt);
-        } else {
+        if (!flightSet.keySet().contains(flt.getDest()))
             flightSet.put(flt.getDest(), new HashSet<>());
-            flightSet.get(flt.getDest()).add(flt);
-        }
+        flightSet.get(flt.getDest()).add(flt);
     }
 
     //if connect == 1, need to consider connectionTime

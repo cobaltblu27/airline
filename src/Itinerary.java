@@ -34,9 +34,6 @@ public class Itinerary {
     }
 
     public Itinerary appendedNew(Flight flt) {
-//        if (arrivalMin + getDest().getConnectTime() > flt.getDepartureMin()) {
-//            //invalid, make exception
-//        }
         LinkedList<Flight> newFltList = new LinkedList<>(flights);
         newFltList.add(flt);
         return new Itinerary(newFltList, true);
@@ -58,23 +55,6 @@ public class Itinerary {
             System.out.println();
         } else System.out.println("No Flight Schedule Found.");
     }
-
-//    private void setETime() {//calculate and set elapseTime
-//        elapseTime = 0;
-//        int arrivalTime = 0;
-//        for (Flight flt : flights) {
-//            if (arrivalTime > flt.getDepartureMin())
-//                elapseTime += Planner.DAY_MIN;
-//
-//            if (flt.getDepartureMin() > flt.getArrivalMin())
-//                elapseTime += Planner.DAY_MIN;
-//
-//            arrivalTime = flt.getArrivalMin() + flt.getDest().getConnectionTime();
-//            arrivalTime %= Planner.DAY_MIN;
-////            arrivalTime = flt.getArrivalMin();
-//        }
-//        elapseTime = elapseTime + arrivalMin() - departureMin();
-//    }
 
     private void setETime() {//calculate and set elapseTime
         elapseTime = 0;

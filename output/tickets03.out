@@ -1,0 +1,9 @@
+>> Source:ITO Destination:YYY Start_Time:0320
+No Flight Schedule Found.
+>> Source:XXX Destination:LIH Start_Time:0320
+No Flight Schedule Found.
+
+Failed to find a flight schedule for 2 out of 2 customers
+Elapsed times: 3 (millsec) for planning, 70 (millisec) for scheduling
+Memory consumption: 3840400 bytes
+Total CPU time consumed by the thread: 149 (millsec)

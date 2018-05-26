@@ -34,6 +34,9 @@ public class Planner {
         Airport start = Airport.portMap.get(startStr);
         Airport dest = Airport.portMap.get(endStr);
 
+        if(start == null || dest == null)
+            return new Itinerary();
+
         for (Flight nextflt : start.allNextFlight(departMin, false)) {
             Itinerary it = new Itinerary(nextflt);
             flightQueue.add(it);

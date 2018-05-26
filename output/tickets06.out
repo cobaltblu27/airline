@@ -4000,6 +4000,6 @@
 [STG->ANC:1515->1915][ANC->ENA:2000->2025]
 
 Failed to find a flight schedule for 0 out of 2000 customers
-Elapsed times: 9 (millsec) for planning, 2260 (millisec) for scheduling
-Memory consumption: 202453056 bytes
-Total CPU time consumed by the thread: 2379 (millsec)
+Elapsed times: 8 (millsec) for planning, 2084 (millisec) for scheduling
+Memory consumption: 163572752 bytes
+Total CPU time consumed by the thread: 2185 (millsec)
