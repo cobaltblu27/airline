@@ -4,7 +4,7 @@
 from subprocess import call
 
 call(["ant", "compile", "-q"])
-call(["sh", "./test"])
+call(["sh", "./readme.txt"])
 
 errcnt = 0
 
@@ -16,7 +16,7 @@ def comp_line(str1, str2):
         print("answer: " + str(str2) + "output: "+ str(str1))
         errcnt = errcnt + 1
 
-with open("output.txt", "r") as out_f, open("./public/cpu-i7/tickets06.out", "r") as ans_f:
+with open("./output/tickets06.out", "r") as out_f, open("./public/cpu-i7/tickets06.out", "r") as ans_f:
     out_lines = out_f.readlines()
     ans_lines = ans_f.readlines()
     for i in range(1, len(out_lines)):
