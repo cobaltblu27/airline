@@ -10,18 +10,24 @@ errcnt = 0
 
 def comp_line(str1, str2):
     global errcnt
-    time1 = str1[-6:-2]
-    time2 = str2[-6:-2]
+    index = str1.rfind('>') + 1
+    time1 = str1[index:index + 4]
+    index = str2.rfind('>') + 1
+    time2 = str2[index:index + 4]
     if time1 != time2:
-        print("answer: " + str(str2) + "output: "+ str(str1))
         errcnt = errcnt + 1
+        return False
+    return True
+
 
 with open("./output/tickets06.out", "r") as out_f, open("./public/cpu-i7/tickets06.out", "r") as ans_f:
     out_lines = out_f.readlines()
     ans_lines = ans_f.readlines()
     for i in range(1, len(out_lines)):
         if out_lines[i][0] == '[':
-            comp_line(out_lines[i], ans_lines[i])
+            if not comp_line(out_lines[i], ans_lines[i]):
+                print(out_lines[i-1].rstrip('\n'))
+                print("answer: " + str(ans_lines[i]) + "output: "+ str(out_lines[i]))
         elif out_lines[i][0] != '>':
             print(out_lines[i].rstrip('\n'))
 

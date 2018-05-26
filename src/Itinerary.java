@@ -28,6 +28,10 @@ public class Itinerary {
         found = true;
     }
 
+    Itinerary() {//create itinerary for no flight
+        found = false;
+    }
+
     public Itinerary appendedNew(Flight flt) {
 //        if (arrivalMin + getDest().getConnectTime() > flt.getDepartureMin()) {
 //            //invalid, make exception
@@ -48,8 +52,10 @@ public class Itinerary {
     }
 
     public void print() {
-        for (Flight f : flights) f.print();
-        System.out.println();
+        if (found) {
+            for (Flight f : flights) f.print();
+            System.out.println();
+        } else System.out.println("No Flight Schedule Found.");
     }
 
     private void setETime() {
