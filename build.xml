@@ -2,7 +2,7 @@
     
     <target name="compile">
         <mkdir dir="bin" />
-        <javac includeantruntime="false" srcdir="./src" destdir="./bin" includes="*.java" />
+        <javac includeantruntime="false" srcdir="./src" destdir="./bin" includes="*.java" debug="true"/>
     </target>
 
     <target name="clean">

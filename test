@@ -1,1 +1,1 @@
-java -cp ./bin MainAir public/Alaska-airports.txt public/Alaska-flights.txt public/Alaska-customers2000.txt | tee output.txt
+java -cp ./bin MainAir public/Alaska-airports.txt public/Alaska-flights.txt public/Alaska-customers2000.txt > output.txt
