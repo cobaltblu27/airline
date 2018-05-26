@@ -26,8 +26,7 @@ public class Airport {
         portMap.put(port, this);
     } // constructor
 
-    /*TODO: make sure this works well, and also consider late starting, early arriving cases*/
-    /*TODO: also consider changing data structure of flights*/
+    //TODO: consider late starting, early arriving cases
     public void addFlight(Flight flt) {
         destList.add(flt.getDest());
         if (flightSet.keySet().contains(flt.getDest())) {
@@ -55,7 +54,6 @@ public class Airport {
     }
 
     //if connect == 1, need to consider connectionTime
-    //TODO STILL not working well
     public Flight nextFlight(int time, Airport dest, boolean connect) {
         if (!flightSet.keySet().contains(dest))
             return null;

@@ -6,14 +6,12 @@
       <change beforePath="$PROJECT_DIR$/bin/Airport.class" afterPath="$PROJECT_DIR$/bin/Airport.class" />
       <change beforePath="$PROJECT_DIR$/bin/Flight.class" afterPath="$PROJECT_DIR$/bin/Flight.class" />
       <change beforePath="$PROJECT_DIR$/bin/Itinerary.class" afterPath="$PROJECT_DIR$/bin/Itinerary.class" />
-      <change beforePath="$PROJECT_DIR$/bin/Planner.class" afterPath="$PROJECT_DIR$/bin/Planner.class" />
       <change beforePath="$PROJECT_DIR$/check.py" afterPath="$PROJECT_DIR$/check.py" />
-      <change beforePath="$PROJECT_DIR$/output/output.txt" afterPath="" />
       <change beforePath="$PROJECT_DIR$/output/tickets06.out" afterPath="$PROJECT_DIR$/output/tickets06.out" />
+      <change beforePath="$PROJECT_DIR$/readme.txt" afterPath="$PROJECT_DIR$/readme.txt" />
       <change beforePath="$PROJECT_DIR$/src/Airport.java" afterPath="$PROJECT_DIR$/src/Airport.java" />
       <change beforePath="$PROJECT_DIR$/src/Flight.java" afterPath="$PROJECT_DIR$/src/Flight.java" />
       <change beforePath="$PROJECT_DIR$/src/Itinerary.java" afterPath="$PROJECT_DIR$/src/Itinerary.java" />
-      <change beforePath="$PROJECT_DIR$/src/Planner.java" afterPath="$PROJECT_DIR$/src/Planner.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,8 +28,8 @@
           <file leaf-file-name="Planner.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Planner.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="291">
-                  <caret line="50" column="65" lean-forward="true" selection-start-line="50" selection-start-column="65" selection-end-line="50" selection-end-column="65" />
+                <state relative-caret-position="396">
+                  <caret line="30" column="82" lean-forward="true" selection-start-line="30" selection-start-column="82" selection-end-line="30" selection-end-column="82" />
                   <folding>
                     <element signature="e#3131#3132#0" expanded="true" />
                     <element signature="e#3204#3205#0" expanded="true" />
@@ -44,24 +42,30 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="Flight.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="Flight.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Flight.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="630">
-                  <caret line="36" column="5" lean-forward="true" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+                <state relative-caret-position="594">
+                  <caret line="34" column="73" lean-forward="false" selection-start-line="34" selection-start-column="73" selection-end-line="34" selection-end-column="73" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Airport.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Airport.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Airport.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="306">
-                  <caret line="57" column="33" lean-forward="false" selection-start-line="57" selection-start-column="33" selection-end-line="57" selection-end-column="33" />
+                <state relative-caret-position="223">
+                  <caret line="28" column="6" lean-forward="false" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
                   <folding>
-                    <element signature="e#3496#3497#0" expanded="true" />
-                    <element signature="e#3533#3534#0" expanded="true" />
+                    <element signature="e#3106#3107#0" expanded="true" />
+                    <element signature="e#3148#3149#0" expanded="true" />
+                    <element signature="e#3192#3193#0" expanded="true" />
+                    <element signature="e#3238#3239#0" expanded="true" />
+                    <element signature="e#3281#3282#0" expanded="true" />
+                    <element signature="e#3323#3324#0" expanded="true" />
+                    <element signature="e#3361#3362#0" expanded="true" />
+                    <element signature="e#3398#3399#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -70,19 +74,19 @@
           <file leaf-file-name="Itinerary.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Itinerary.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="309">
-                  <caret line="56" column="18" lean-forward="false" selection-start-line="56" selection-start-column="18" selection-end-line="56" selection-end-column="18" />
+                <state relative-caret-position="435">
+                  <caret line="57" column="31" lean-forward="false" selection-start-line="57" selection-start-column="31" selection-end-line="57" selection-end-column="31" />
                   <folding>
-                    <element signature="e#660#661#0" expanded="true" />
-                    <element signature="e#721#722#0" expanded="true" />
-                    <element signature="e#1925#1926#0" expanded="true" />
-                    <element signature="e#1975#1976#0" expanded="true" />
-                    <element signature="e#2003#2004#0" expanded="true" />
-                    <element signature="e#2053#2054#0" expanded="true" />
-                    <element signature="e#2084#2085#0" expanded="true" />
-                    <element signature="e#2140#2141#0" expanded="true" />
-                    <element signature="e#2173#2174#0" expanded="true" />
-                    <element signature="e#2232#2233#0" expanded="true" />
+                    <element signature="e#680#681#0" expanded="true" />
+                    <element signature="e#741#742#0" expanded="true" />
+                    <element signature="e#2676#2677#0" expanded="true" />
+                    <element signature="e#2726#2727#0" expanded="true" />
+                    <element signature="e#2754#2755#0" expanded="true" />
+                    <element signature="e#2804#2805#0" expanded="true" />
+                    <element signature="e#2835#2836#0" expanded="true" />
+                    <element signature="e#2891#2892#0" expanded="true" />
+                    <element signature="e#2924#2925#0" expanded="true" />
+                    <element signature="e#2983#2984#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -105,8 +109,8 @@
       <list>
         <option value="$PROJECT_DIR$/src/Planner.java" />
         <option value="$PROJECT_DIR$/src/Itinerary.java" />
-        <option value="$PROJECT_DIR$/src/Flight.java" />
         <option value="$PROJECT_DIR$/src/Airport.java" />
+        <option value="$PROJECT_DIR$/src/Flight.java" />
       </list>
     </option>
   </component>
@@ -272,12 +276,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1527263212128</updated>
-      <workItem from="1527263214572" duration="8482000" />
+      <workItem from="1527263214572" duration="12563000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8482000" />
+    <option name="totallyTimeSpent" value="12563000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-6" width="1920" height="1086" extended-state="6" />
@@ -374,8 +378,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Planner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="50" column="65" lean-forward="true" selection-start-line="50" selection-start-column="65" selection-end-line="50" selection-end-column="65" />
+        <state relative-caret-position="396">
+          <caret line="30" column="82" lean-forward="true" selection-start-line="30" selection-start-column="82" selection-end-line="30" selection-end-column="82" />
           <folding>
             <element signature="e#3131#3132#0" expanded="true" />
             <element signature="e#3204#3205#0" expanded="true" />
@@ -383,41 +387,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Airport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="28" column="6" lean-forward="false" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
+          <folding>
+            <element signature="e#3106#3107#0" expanded="true" />
+            <element signature="e#3148#3149#0" expanded="true" />
+            <element signature="e#3192#3193#0" expanded="true" />
+            <element signature="e#3238#3239#0" expanded="true" />
+            <element signature="e#3281#3282#0" expanded="true" />
+            <element signature="e#3323#3324#0" expanded="true" />
+            <element signature="e#3361#3362#0" expanded="true" />
+            <element signature="e#3398#3399#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Itinerary.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="56" column="18" lean-forward="false" selection-start-line="56" selection-start-column="18" selection-end-line="56" selection-end-column="18" />
+        <state relative-caret-position="435">
+          <caret line="57" column="31" lean-forward="false" selection-start-line="57" selection-start-column="31" selection-end-line="57" selection-end-column="31" />
           <folding>
-            <element signature="e#660#661#0" expanded="true" />
-            <element signature="e#721#722#0" expanded="true" />
-            <element signature="e#1925#1926#0" expanded="true" />
-            <element signature="e#1975#1976#0" expanded="true" />
-            <element signature="e#2003#2004#0" expanded="true" />
-            <element signature="e#2053#2054#0" expanded="true" />
-            <element signature="e#2084#2085#0" expanded="true" />
-            <element signature="e#2140#2141#0" expanded="true" />
-            <element signature="e#2173#2174#0" expanded="true" />
-            <element signature="e#2232#2233#0" expanded="true" />
+            <element signature="e#680#681#0" expanded="true" />
+            <element signature="e#741#742#0" expanded="true" />
+            <element signature="e#2676#2677#0" expanded="true" />
+            <element signature="e#2726#2727#0" expanded="true" />
+            <element signature="e#2754#2755#0" expanded="true" />
+            <element signature="e#2804#2805#0" expanded="true" />
+            <element signature="e#2835#2836#0" expanded="true" />
+            <element signature="e#2891#2892#0" expanded="true" />
+            <element signature="e#2924#2925#0" expanded="true" />
+            <element signature="e#2983#2984#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Flight.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="36" column="5" lean-forward="true" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+        <state relative-caret-position="594">
+          <caret line="34" column="73" lean-forward="false" selection-start-line="34" selection-start-column="73" selection-end-line="34" selection-end-column="73" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Airport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="57" column="33" lean-forward="false" selection-start-line="57" selection-start-column="33" selection-end-line="57" selection-end-column="33" />
-          <folding>
-            <element signature="e#3496#3497#0" expanded="true" />
-            <element signature="e#3533#3534#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

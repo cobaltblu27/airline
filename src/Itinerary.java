@@ -26,6 +26,7 @@ public class Itinerary {
         flights = new LinkedList<>();
         flights.add(flt);
         found = true;
+        setETime();
     }
 
     Itinerary() {//create itinerary for no flight
@@ -58,19 +59,34 @@ public class Itinerary {
         } else System.out.println("No Flight Schedule Found.");
     }
 
-    private void setETime() {
+//    private void setETime() {//calculate and set elapseTime
+//        elapseTime = 0;
+//        int arrivalTime = 0;
+//        for (Flight flt : flights) {
+//            if (arrivalTime > flt.getDepartureMin())
+//                elapseTime += Planner.DAY_MIN;
+//
+//            if (flt.getDepartureMin() > flt.getArrivalMin())
+//                elapseTime += Planner.DAY_MIN;
+//
+//            arrivalTime = flt.getArrivalMin() + flt.getDest().getConnectionTime();
+//            arrivalTime %= Planner.DAY_MIN;
+////            arrivalTime = flt.getArrivalMin();
+//        }
+//        elapseTime = elapseTime + arrivalMin() - departureMin();
+//    }
+
+    private void setETime() {//calculate and set elapseTime
         elapseTime = 0;
-        int arrivalTime = 0;
+        int departure = flights.getFirst().getDepartureMin();//available connection time
         for (Flight flt : flights) {
-            if (arrivalTime > flt.getDepartureMin())
-                elapseTime += Planner.DAY_MIN;
+            elapseTime += Planner.getInterval(departure, flt.getDepartureMin());
+            elapseTime += flt.getElapseTime();
+            elapseTime += flt.getDest().getConnectionTime();
 
-            if (flt.getDepartureMin() > flt.getArrivalMin())
-                elapseTime += Planner.DAY_MIN;
-
-            arrivalTime = flt.getArrivalMin();
+            departure = flt.getArrivalMin() + flt.getDest().getConnectionTime();
+            departure %= Planner.DAY_MIN;
         }
-        elapseTime = elapseTime + arrivalMin() - departureMin();
     }
 
     public Airport dest() {

@@ -3,10 +3,16 @@
 
 from subprocess import call
 
-call(["ant", "compile", "-q"])
-call(["sh", "./readme.txt"])
+input_val = raw_input("Recalculate output? (y to recalculate)\n>") 
+if input_val is 'y':
+    call(["ant", "compile", "-q"])
+    comp_index = int(raw_input("ticket file number:\n>")) - 1
+    with open("./readme.txt") as shfile:
+        execute_line = shfile.readlines()
+        call(execute_line[comp_index].split())
 
 errcnt = 0
+
 
 def comp_line(str1, str2):
     global errcnt
@@ -31,7 +37,9 @@ with open("./output/tickets06.out", "r") as out_f, open("./public/cpu-i7/tickets
         elif out_lines[i][0] != '>':
             print(out_lines[i].rstrip('\n'))
 
+    cputime_str = ans_lines[len(ans_lines) - 1]
+    print("\nanswer CPU time" + cputime_str[cputime_str.rfind(':'):])
 
-print("\nnumber of errors: " + str(errcnt))
+print("number of errors: " + str(errcnt))
 
 

@@ -33,7 +33,6 @@ public class Flight{
         System.out.print("->");
         dest.print();
         System.out.print(":" + departureTime + "->" + arrivalTime + "]");
-        System.out.print(dest.getConnectionTime());
     }
 
     public int getArrivalMin() {
