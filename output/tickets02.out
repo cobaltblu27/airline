@@ -200,6 +200,6 @@
 [JHM->HNL:0758->0830][HNL->ITO:0947->1038]
 
 Failed to find a flight schedule for 0 out of 100 customers
-Elapsed times: 3 (millsec) for planning, 85 (millisec) for scheduling
+Elapsed times: 1 (millsec) for planning, 94 (millisec) for scheduling
 Memory consumption: 5119624 bytes
-Total CPU time consumed by the thread: 163 (millsec)
+Total CPU time consumed by the thread: 182 (millsec)

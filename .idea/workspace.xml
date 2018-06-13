@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ec41e68b-69c4-4864-a405-270b8dca4966" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/bin/Airport.class" afterPath="$PROJECT_DIR$/bin/Airport.class" />
-      <change beforePath="$PROJECT_DIR$/bin/Itinerary.class" afterPath="$PROJECT_DIR$/bin/Itinerary.class" />
-      <change beforePath="$PROJECT_DIR$/bin/Planner.class" afterPath="$PROJECT_DIR$/bin/Planner.class" />
-      <change beforePath="$PROJECT_DIR$/check.py" afterPath="$PROJECT_DIR$/check.py" />
-      <change beforePath="$PROJECT_DIR$/output/tickets06.out" afterPath="$PROJECT_DIR$/output/tickets06.out" />
-      <change beforePath="$PROJECT_DIR$/readme.txt" afterPath="$PROJECT_DIR$/readme.txt" />
-      <change beforePath="$PROJECT_DIR$/src/Airport.java" afterPath="$PROJECT_DIR$/src/Airport.java" />
-      <change beforePath="$PROJECT_DIR$/src/Itinerary.java" afterPath="$PROJECT_DIR$/src/Itinerary.java" />
-      <change beforePath="$PROJECT_DIR$/src/Planner.java" afterPath="$PROJECT_DIR$/src/Planner.java" />
-    </list>
+    <list default="true" id="ec41e68b-69c4-4864-a405-270b8dca4966" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -56,7 +45,7 @@
             <entry file="file://$PROJECT_DIR$/src/Airport.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="468">
-                  <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+                  <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
                   <folding>
                     <element signature="e#2131#2132#0" expanded="true" />
                     <element signature="e#2173#2174#0" expanded="true" />
@@ -276,16 +265,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1527263212128</updated>
-      <workItem from="1527263214572" duration="14659000" />
+      <workItem from="1527263214572" duration="14819000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14659000" />
+    <option name="totallyTimeSpent" value="14819000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-6" width="1920" height="1086" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -398,7 +386,7 @@
     <entry file="file://$PROJECT_DIR$/src/Airport.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
-          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding>
             <element signature="e#2131#2132#0" expanded="true" />
             <element signature="e#2173#2174#0" expanded="true" />
