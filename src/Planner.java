@@ -50,13 +50,21 @@ public class Planner {
             , Queue<Itinerary> flightQueue
             , HashMap<Airport, Itinerary> airportMinMap) {
 
+        HashSet<Airport> visitset = new HashSet<>();
         while (true) {
             if (flightQueue.isEmpty())//return not found itinerary
                 return new Itinerary();
             Itinerary fastest = flightQueue.poll();//min value; airport with least elapseTime
             Airport fltDest = fastest.dest();
+
+            if(visitset.contains(fltDest))
+                continue;
+            else
+                visitset.add(fltDest);
+
             if (fltDest.equals(dest))
                 return fastest;
+
             HashSet<Flight> nextSet = fltDest.allNextFlight(fastest.arrivalMin(), true);
 
             for (Flight flt : nextSet) {
