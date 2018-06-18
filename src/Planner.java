@@ -57,10 +57,8 @@ public class Planner {
             Itinerary fastest = flightQueue.poll();//min value; airport with least elapseTime
             Airport fltDest = fastest.dest();
 
-            if(visitset.contains(fltDest))
-                continue;
-            else
-                visitset.add(fltDest);
+            if (visitset.contains(fltDest)) continue;
+            else visitset.add(fltDest);
 
             if (fltDest.equals(dest))
                 return fastest;

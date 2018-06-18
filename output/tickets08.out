@@ -400,6 +400,6 @@ No Flight Schedule Found.
 [FCO->FRA:1435->1635][FRA->NCE:1720->1850]
 
 Failed to find a flight schedule for 38 out of 200 customers
-Elapsed times: 10 (millsec) for planning, 385 (millisec) for scheduling
-Memory consumption: 22661128 bytes
-Total CPU time consumed by the thread: 519 (millsec)
+Elapsed times: 8 (millsec) for planning, 297 (millisec) for scheduling
+Memory consumption: 29018112 bytes
+Total CPU time consumed by the thread: 423 (millsec)

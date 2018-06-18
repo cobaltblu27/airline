@@ -40000,6 +40000,6 @@
 [VDZ->ANC:1815->1855][ANC->ORD:2215->0715][ORD->JAX:1245->1600]
 
 Failed to find a flight schedule for 0 out of 20000 customers
-Elapsed times: 10 (millsec) for planning, 8922 (millisec) for scheduling
-Memory consumption: 13671192 bytes
-Total CPU time consumed by the thread: 9023 (millsec)
+Elapsed times: 9 (millsec) for planning, 6473 (millisec) for scheduling
+Memory consumption: 16547008 bytes
+Total CPU time consumed by the thread: 6562 (millsec)

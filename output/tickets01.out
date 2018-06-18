@@ -11,7 +11,7 @@
 >> Source:OGG Destination:HNL Start_Time:1132
 [OGG->HNL:1300->1334]
 >> Source:LNY Destination:ITO Start_Time:1012
-[LNY->HNL:1050->1120][HNL->ITO:1438->1529]
+[LNY->ITO:1050->1529]
 >> Source:ITO Destination:MKK Start_Time:0517
 [ITO->HNL:0643->0730][HNL->MKK:0825->0850]
 >> Source:OGG Destination:LNY Start_Time:1445
@@ -20,6 +20,6 @@
 [ITO->HNL:0643->0730][HNL->LIH:0820->0857]
 
 Failed to find a flight schedule for 0 out of 10 customers
-Elapsed times: 2 (millsec) for planning, 80 (millisec) for scheduling
-Memory consumption: 3839952 bytes
-Total CPU time consumed by the thread: 171 (millsec)
+Elapsed times: 2 (millsec) for planning, 64 (millisec) for scheduling
+Memory consumption: 3840376 bytes
+Total CPU time consumed by the thread: 150 (millsec)
